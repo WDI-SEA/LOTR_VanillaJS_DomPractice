@@ -57,13 +57,30 @@ function makeMiddleEarth() {
 function makeHobbits() {
 	console.log('2: makeHobbits')
 
-	// display an `unordered list` of hobbits in the shire
-
-	// give each hobbit a class of `hobbit`
-
-	// hint: create a 'ul' outside the loop into which to append the 'li's
-
 	// hint: get 'The-Shire' by using its id
+	const theShire = document.getElementById('The-Shire')
+	// console.log(theShire)
+	// we can also use querySelector!!
+	// const theShire = document.querySelector('#The-Shire')
+	// hint: create a 'ul' outside the loop into which to append the 'li's
+	const ulHobbits = document.createElement('ul')
+	ulHobbits.id = 'hobbits'
+	// console.log(ulHobbits)
+	// display an `unordered list` of hobbits in the shire
+	// give each hobbit a class of `hobbit`
+	for (let i = 0; i < hobbits.length; i++) {
+		// create an li for each hobbit
+		const liHobbit = document.createElement('li')
+		// display each hobbit's name
+		liHobbit.textContent = hobbits[i]
+		// give each hobbit a class of hobbit
+		liHobbit.className = 'hobbit'
+		// append each hobbit li to the hobbits ul
+		ulHobbits.appendChild(liHobbit)
+	}
+	// attach the hobbits ul to the shire article
+	theShire.appendChild(ulHobbits)
+
 }
 
 // COMMIT YOUR WORK
@@ -77,10 +94,18 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-
+	const oneRingDiv = document.createElement('div')
+	oneRingDiv.id = 'the-ring'
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	oneRingDiv.className = 'magic-imbued-jewelry'
 	// add the ring as a child of `Frodo`
+	// find the ul where frodo lives
+	const ulHobbits = document.querySelector('ul')
+	// figure out which li frodo is
+	console.log(ulHobbits.children)
+	const liFrodo = ulHobbits.children[0]
+	// attach the ring
+	liFrodo.appendChild(oneRingDiv)
 }
 
 // COMMIT YOUR WORK
