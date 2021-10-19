@@ -254,6 +254,9 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
   console.log('11: itsDangerousToGoAlone');
   const frodo = document.querySelector('.the-fellowship li:first-child');
+  const ring = document.createElement('div');
+  ring.className = 'magic-imbued-jewelry';
+  frodo.appendChild(ring);
   const sam = document.querySelector('.the-fellowship li:nth-child(2)');
   const mordor = document.getElementById('Mordor');
   // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
@@ -275,8 +278,17 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
   console.log('12: weWantsIt');
   // Create a div with an id of `'gollum'` and add it to Mordor
+  const gollum = document.createElement('div');
+  gollum.id = 'gollum';
+  const mordor = document.getElementById('Mordor');
+  mordor.appendChild(gollum);
   // Remove `the ring` from `Frodo` and give it to `Gollum`
+  const frodo = document.querySelector('#Mordor .magic-imbued-jewelry');
+  frodo.remove();
   // Move Gollum into Mount Doom
+  const gollumRing = document.createElement('div');
+  gollumRing.className = 'magic-imbued-jewelry';
+  gollum.appendChild(gollumRing);
 }
 
 // COMMIT YOUR WORK
