@@ -135,6 +135,7 @@ function makeBuddies() {
     const Buds = document.createElement('aside');
     // put an `unordered list` of the `'buddies'` in the aside
     const buddiesList = document.createElement('ul');
+    buddiesList.setAttribute('class', 'buddies-list');
     const buds = document.createElement('li');
     buds.textContent = bud;
     buddiesList.appendChild(buds);
@@ -154,8 +155,11 @@ function makeBuddies() {
 
 function leaveTheShire() {
   console.log('6: leaveTheShire');
-
-  // assemble the `hobbits` and move them to `rivendell`
+  const hobbit = document.querySelector('.hobbit');
+  const buddiesList = document.querySelector('.buddies-list');
+  const rivendell = document.getElementById('Rivendell');
+  buddiesList.appendChild(hobbit);
+  rivendell.appendChild(buddiesList);
 }
 
 // COMMIT YOUR WORK
