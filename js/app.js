@@ -170,6 +170,8 @@ function beautifulStranger() {
   console.log('7: beautifulStranger');
 
   // change the `'Strider'` text to `'Aragorn'`
+  const nameChange = document.querySelector('#buddies li:nth-child(4)');
+  nameChange.textContent = 'Aragorn';
 }
 
 // COMMIT YOUR WORK
