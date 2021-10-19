@@ -187,7 +187,7 @@ function forgeTheFellowShip() {
   const hobbit = document.querySelector('#Rivendell #hobbits');
   hobbit.remove();
   aside.remove();
-  console.log(aside);
+
   // create a new div called `'the-fellowship'` within `rivendell`
   const theFellowship = document.createElement('div');
   theFellowship.className = 'the-fellowship';
@@ -199,7 +199,7 @@ function forgeTheFellowShip() {
     const liTheFellowship = document.createElement('li');
     liTheFellowship.textContent = fellowship;
     ulTheFellowship.appendChild(liTheFellowship);
-    alert(`${fellowship} have joined your party`);
+    // alert(`${fellowship} have joined your party`);
   });
   theFellowship.appendChild(ulTheFellowship);
   rivendell.appendChild(theFellowship);
@@ -217,7 +217,12 @@ function forgeTheFellowShip() {
 function theBalrog() {
   console.log('9: theBalrog');
   // change the `'Gandalf'` text to `'Gandalf the White'`
+  const gandalfWhite = document.querySelector('.the-fellowship li:nth-child(5)');
+  gandalfWhite.textContent = 'Gandalf the White';
+
   // apply the following style to the element, make the // background 'white', add a grey border
+  gandalfWhite.style.backgroundColor = 'white';
+  gandalfWhite.style.border = '5px solid gray';
 }
 
 // COMMIT YOUR WORK
