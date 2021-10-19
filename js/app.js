@@ -203,6 +203,7 @@ function forgeTheFellowShip() {
   });
   theFellowship.appendChild(ulTheFellowship);
   rivendell.appendChild(theFellowship);
+
   // after each character is added make an alert that they // have joined your party
   // NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
@@ -236,7 +237,11 @@ function hornOfGondor() {
   console.log('10: hornOfGondor');
   // pop up an alert that the horn of gondor has been blown
   // Boromir's been killed by the Uruk-hai!
+  alert("The horn of gondor has been blown. Boromir's been killed by the Uruk-hai!");
+  //   alert("")
   // Remove `Boromir` from the Fellowship
+  const removeBoromir = document.querySelector('.the-fellowship li:last-child');
+  removeBoromir.remove();
 }
 
 // COMMIT YOUR WORK
