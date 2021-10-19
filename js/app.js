@@ -129,23 +129,22 @@ function makeBaddies() {
 
 function makeBuddies() {
   console.log('5: makeBuddies');
-
-  buddies.forEach((bud) => {
-    // create an `aside` tag
-    const Buds = document.createElement('aside');
-    // put an `unordered list` of the `'buddies'` in the aside
-    const buddiesList = document.createElement('ul');
-    buddiesList.setAttribute('class', 'buddies-list');
-    const buds = document.createElement('li');
-    buds.textContent = bud;
-    buddiesList.appendChild(buds);
-    Buds.appendChild(buddiesList);
-    // insert your aside as a child element of `rivendell`
-    const Rivendell = document.getElementById('Rivendell');
-    Rivendell.appendChild(buddiesList);
+  const rivendell = document.getElementById('Rivendell');
+  // create an `aside` tag
+  const aside = document.createElement('aside');
+  // put an `unordered list` of the `'buddies'` in the aside
+  const ulBuddies = document.createElement('ul');
+  ulBuddies.id = 'buddies';
+  buddies.forEach((buddy) => {
+    const liBuddy = document.createElement('li');
+    liBuddy.className = 'buddy';
+    liBuddy.textContent = buddy;
+    ulBuddies.appendChild(liBuddy);
+    aside.appendChild(ulBuddies);
   });
+  // insert your aside as a child element of `rivendell`
+  rivendell.appendChild(aside);
 }
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
 
@@ -155,13 +154,11 @@ function makeBuddies() {
 
 function leaveTheShire() {
   console.log('6: leaveTheShire');
-  const hobbit = document.querySelector('.hobbit');
-  const buddiesList = document.querySelector('.buddies-list');
+  // assemble the `hobbits` and move them to `rivendell`
+  const hobbits = document.getElementById('hobbits');
   const rivendell = document.getElementById('Rivendell');
-  buddiesList.appendChild(hobbit);
-  rivendell.appendChild(buddiesList);
+  rivendell.appendChild(hobbits);
 }
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
 
