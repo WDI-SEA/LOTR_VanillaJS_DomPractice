@@ -199,7 +199,7 @@ function forgeTheFellowShip() {
     const liTheFellowship = document.createElement('li');
     liTheFellowship.textContent = fellowship;
     ulTheFellowship.appendChild(liTheFellowship);
-    // alert(`${fellowship} have joined your party`);
+    alert(`${fellowship} have joined your party`);
   });
   theFellowship.appendChild(ulTheFellowship);
   rivendell.appendChild(theFellowship);
