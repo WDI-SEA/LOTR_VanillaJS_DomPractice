@@ -101,13 +101,8 @@ function keepItSecretKeepItSafe() {
 		//figure out which li frodo is
 		// attach the ring
 	const ulHobbits = document.querySelector('ul')
-	const liFrodo = ulHobbits.children[0]
+	const liFrodo = ulHobbits.children[0] // remember this method also remember includes, for in, and find()
 	liFrodo.appendChild(oneRingDiv)
-
-
-
-
-
 	}
 
 // COMMIT YOUR WORK
@@ -121,9 +116,19 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
+	const mordor = document.getElementById('Mordor')
+	const ulBaddies = document.createElement('ul')
+	ulBaddies.id = 'baddies'
 
 	// give each of the baddies a class of "baddy"
+	for (let i = 0; i < baddies.length; i++ ) {
+		const liBaddy = document.createElement('li')
+		liBaddy.className = 'baddy'
+		liBaddy.textContent = baddies[i]
+		ulBaddies.appendChild(liBaddy)
+	}
 
+	mordor.appendChild(ulBaddies)
 	// remember to append them to Mordor
 }
 
@@ -137,11 +142,23 @@ function makeBaddies() {
 function makeBuddies() {
 	console.log('5: makeBuddies')
 
+	const aside = document.createElement('aside')
 	// create an `aside` tag
+	const ulBuddies = document.createElement('ul')
+	// const buddies = ['Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir']
+
+	buddies.forEach((buddy) => {
+		const liBuddy = document.createElement('li')
+		liBuddy.className = 'buddy'
+		liBuddy.textContent = buddy
+		ulBuddies.appendChild(liBuddy)
+	})
 
 	// put an `unordered list` of the `'buddies'` in the aside
-
+	aside.appendChild(ulBuddies)
 	// insert your aside as a child element of `rivendell`
+	const rivendell = document.getElementById('Rivendell')
+	rivendell.appendChild(aside)
 }
 
 // COMMIT YOUR WORK
