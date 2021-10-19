@@ -1,4 +1,9 @@
 console.log('Linked.')
+// DECLARING GLOBAL VARIABLES BECAUSE I DON'T WANT TO SELECT WITHIN EACH FUNCTION!!!
+const ulBuddies = document.createElement('ul')
+
+
+
 
 // Dramatis Personae
 const hobbits = [
@@ -144,7 +149,7 @@ function makeBuddies() {
 
 	const aside = document.createElement('aside')
 	// create an `aside` tag
-	const ulBuddies = document.createElement('ul')
+	// const ulBuddies = document.createElement('ul')
 	// const buddies = ['Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir']
 
 	buddies.forEach((buddy) => {
@@ -171,6 +176,15 @@ function makeBuddies() {
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
+	hobbits.forEach((hobbit) => {
+		const liHobbit = document.createElement('li')
+		liHobbit.className = "hobbit"
+		liHobbit.textContent = hobbit
+		ulBuddies.appendChild(liHobbit)
+	})
+	console.log(ulBuddies)
+
+
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
@@ -183,6 +197,15 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
+	let changeName = document.querySelectorAll('.buddy')
+	changeName.forEach((str) => {
+		if (str.innerText == "strider") {
+			str.innerText = "aragorn"
+		}
+		console.log(str)
+	})
+
+	
 
 	// change the `'Strider'` text to `'Aragorn'`
 }
