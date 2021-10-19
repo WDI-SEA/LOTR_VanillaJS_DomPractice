@@ -259,12 +259,13 @@ function itsDangerousToGoAlone() {
   frodo.appendChild(ring);
   const sam = document.querySelector('.the-fellowship li:nth-child(2)');
   const mordor = document.getElementById('Mordor');
-  // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
-  mordor.appendChild(frodo);
-  mordor.appendChild(sam);
-  // add a div with an id of `'mount-doom'` to `Mordor`
   const mountDoom = document.createElement('div');
   mountDoom.id = 'mount-doom';
+  // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+  mountDoom.appendChild(frodo);
+  mountDoom.appendChild(sam);
+  // add a div with an id of `'mount-doom'` to `Mordor`
+
   mordor.appendChild(mountDoom);
 }
 
@@ -301,7 +302,18 @@ function weWantsIt() {
 function thereAndBackAgain() {
   console.log('13: thereAndBackAgain');
   // remove `Gollum` and `the Ring` from the document
+  const gollum = document.getElementById('gollum');
+  const ring = document.querySelector('#Mordor .magic-imbued-jewelry');
+  gollum.remove();
+  ring.remove();
   // Move all the `hobbits` back to `the shire`
+  const mountDoom = document.getElementById('mount-doom');
+  const homeFrodo = document.querySelector('#mount-doom li:first-child');
+  const homeSam = document.querySelector('#mount-doom li:last-child');
+  const shire = document.querySelector('#The-Shire');
+  shire.appendChild(homeFrodo);
+  shire.appendChild(homeSam);
+  mountDoom.remove();
 }
 
 // COMMIT YOUR WORK
