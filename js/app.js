@@ -14,6 +14,7 @@ const baddies = ['Sauron', 'Saruman', 'The Uruk-hai', 'Orcs']
 
 const lands = ['The-Shire', 'Rivendell', 'Mordor']
 
+
 // ============
 // Chapter 1
 // ============
@@ -75,7 +76,6 @@ function makeHobbits() {
 
 function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
-
 	// create a div with an id of `'the-ring'`
 	const theRing = document.createElement('div')
 	theRing.id = 'the ring'
@@ -123,11 +123,12 @@ function makeBuddies() {
 	const aside = document.createElement('aside')
 	// put an `unordered list` of the `'buddies'` in the aside
 	const goodGuys = document.createElement('ul')
+	goodGuys.id = 'buddies'
 	for (i = 0; i < buddies.length; i++){
 		const li = document.createElement('li')
 		li.innerText = buddies[i]
 		li.className = 'buddy'
-		aside.appendChild(li)
+		goodGuys.appendChild(li)
 	}
 	aside.appendChild(goodGuys)
 	// insert your aside as a child element of `rivendell`
@@ -143,7 +144,6 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
 	// assemble the `hobbits` and move them to `rivendell`
 	const shireParty = document.getElementById('hobbit-list')
 	document.getElementById('Rivendell').appendChild(shireParty)	
@@ -156,11 +156,11 @@ function leaveTheShire() {
 // Chapter 7
 // ============
 
-function beautifulStranger() {
-	const aragorn = document.getElementsByClassName('buddy')[3]
+function beautifulStranger() {	
 	console.log('7: beautifulStranger')
-	aragorn.innerHTML = 'Aragorn'
 	// change the `'Strider'` text to `'Aragorn'`
+	const aragorn = document.getElementsByClassName('buddy')[3]
+	aragorn.innerHTML = 'Aragorn'
 }
 
 // COMMIT YOUR WORK
@@ -170,12 +170,29 @@ function beautifulStranger() {
 // Chapter 8
 // ============
 
+
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
+	const hobbitList = document.querySelectorAll('li.hobbit')
+	const friendList = document.querySelectorAll('li.buddy')
 	// create a new div called `'the-fellowship'` within `rivendell`
-	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	// after each character is added make an alert that they // have joined your party
-
+	const fellowshipDiv = document.createElement('div')
+	const ul = document.createElement('ul')
+	fellowshipDiv.id = 'the-fellowship'
+	document.getElementById('Rivendell').appendChild(fellowshipDiv)
+	fellowshipDiv.appendChild(ul)
+	const theFellowship = fellowshipDiv.firstElementChild
+	// // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	for (i = 0; i < friendList.length; i++){
+		theFellowship.appendChild(friendList[i])
+		// after each character is added make an alert that they // have joined your party
+		alert(friendList[i].innerText + ' has joined the party!')
+	}
+	for (i = 0; i < hobbitList.length; i++){
+		theFellowship.appendChild(hobbitList[i])
+		// after each character is added make an alert that they // have joined your party
+		alert(hobbitList[i].innerText + ' has joined the party!')
+	}
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
@@ -189,7 +206,10 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	const gandalf = document.getElementsByClassName('buddy')[0]
+	gandalf.innerText = 'Gandalf the White'
 	// apply the following style to the element, make the // background 'white', add a grey border
+	gandalf.style = 'background: white; border: 1px solid grey'
 }
 
 // COMMIT YOUR WORK
