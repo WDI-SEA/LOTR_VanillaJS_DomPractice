@@ -78,7 +78,7 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 	// create a div with an id of `'the-ring'`
 	const theRing = document.createElement('div')
-	theRing.id = 'the ring'
+	theRing.id = 'the-ring'
 	// give the div a class of `'magic-imbued-jewelry'`
 	theRing.className = 'magic-imbued-jewelry'
 	// add the ring as a child of `Frodo`
@@ -260,8 +260,12 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	const gollumDiv = document.createElement('div')
+	gollumDiv.id = 'gollum'
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	gollumDiv.appendChild(document.getElementById('the-ring'))
 	// Move Gollum into Mount Doom
+	document.getElementById('mount-doom').appendChild(gollumDiv)
 }
 
 // COMMIT YOUR WORK
