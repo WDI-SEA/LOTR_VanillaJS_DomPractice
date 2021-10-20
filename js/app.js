@@ -231,12 +231,12 @@ function forgeTheFellowShip() {
 	const hobbits = document.getElementsByClassName('hobbit')
 	for (i = 0; i < hobbits.length; i++) {
 		theFellowship.appendChild(hobbits[i])
-		alert(`${hobbits[i].textContent} has joined your party`)
+		// alert(`${hobbits[i].textContent} has joined your party`)
 	}
 	const buddies = document.getElementsByClassName('buddy')
 	for (i = 0; i < buddies.length; i++) {
 		theFellowship.appendChild(buddies[i])
-		alert(`${buddies[i].textContent} has joined your party`)
+		// alert(`${buddies[i].textContent} has joined your party`)
 	}
 
 	// after each character is added make an alert that they // have joined your party
@@ -254,7 +254,11 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	const buds = document.getElementsByClassName('buddy')
+	buds[2].textContent = 'Gandalf the White'
 	// apply the following style to the element, make the // background 'white', add a grey border
+	buds[2].style.backgroundColor = 'white'
+	buds[2].style.border = '3px solid grey'
 }
 
 // COMMIT YOUR WORK
