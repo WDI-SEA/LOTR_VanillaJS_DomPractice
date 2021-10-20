@@ -191,8 +191,35 @@ function forgeTheFellowShip() {
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
+	const theFellowshipDiv = document.createElement('div')
+	theFellowshipDiv.setAttribute('id','the-fellowship')
+	const theFellowshipUl = document.createElement('ul')
+	theFellowshipUl.setAttribute('id','the-fellowship-ul')
+	const rivendell = document.getElementById('Rivendell')
+	console.log(rivendell.childNodes[1].childNodes[0])
+	let i = 0
+	while (i < 5) {
+		console.log(`${rivendell.childNodes[1].childNodes[0].innerText} has joined the fellowship`)
+		theFellowshipUl.appendChild(rivendell.childNodes[1].childNodes[0])
+		i++
+	}
+	let j = 0
+	while (j < 4) {
+		console.log(`${rivendell.childNodes[2].childNodes[0].innerText} has joined the fellowship`)
+		theFellowshipUl.appendChild(rivendell.childNodes[2].childNodes[0])
+		j++
+	}
+	// for (let i = 1; i < 3; i++) {
+	// 	for (let j = 0; j < rivendell.childNodes[i].childNodes.length; j++) {
+	// 		// theFellowshipUl.appendChild(rivendell.childNodes[i].childNodes[j])
+	// 		document.getElementById('the-fellowship-ul').appendChild(rivendell.childNodes[i].childNodes[j])
+	// 	}
+	// }
+	rivendell.appendChild(theFellowshipDiv)
+	theFellowshipDiv.appendChild(theFellowshipUl)
 
-	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+
+		// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
 // COMMIT YOUR WORK
