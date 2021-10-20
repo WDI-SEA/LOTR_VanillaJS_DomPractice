@@ -261,12 +261,12 @@ function hornOfGondor() {
 	setTimeout(()=>{
 		removeBoromir.style.color = "red"
 		removeBoromir.style.backgroundColor = "#af111c"
-	}, 4000)
+	}, 3000)
 
 	setTimeout(()=>{
 
 		removeBoromir.remove()
-	}, 6000)
+	}, 4000)
 }
 
 // COMMIT YOUR WORK
@@ -301,8 +301,17 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
-	// Remove `the ring` from `Frodo` and give it to `Gollum`
-	// Move Gollum into Mount Doom
+	setTimeout(()=>{
+		const gollumPlace = document.createElement('div')
+		gollumPlace.id = "gollum"
+		mordorLand.appendChild(gollumPlace)
+		// Remove `the ring` from `Frodo` and give it to `Gollum`
+		const theOneRing = document.querySelector('#the-ring')
+		gollumPlace.appendChild(theOneRing)
+		// Move Gollum into Mount Doom
+		mountDoom.appendChild(gollumPlace)
+	}, 3000)
+
 }
 
 // COMMIT YOUR WORK
