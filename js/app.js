@@ -57,13 +57,12 @@ function makeHobbits() {
 	for (i = 0; i < hobbits.length; i++) {
 		const li = document.createElement('li')
 		li.innerText = hobbits[i]
+		// give each hobbit a class of `hobbit`
 		li.className = 'hobbit'
 		hobbitList.appendChild(li)
 	}
-	// give each hobbit a class of `hobbit`
 	document.getElementById('The-Shire').appendChild(hobbitList)
 	// hint: create a 'ul' outside the loop into which to append the 'li's
-
 	// hint: get 'The-Shire' by using its id
 }
 
@@ -78,10 +77,12 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-
+	const theRing = document.createElement('div')
+	theRing.id = 'the ring'
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	theRing.className = 'magic-imbued-jewelry'
 	// add the ring as a child of `Frodo`
+	document.querySelector('ul').firstChild.appendChild(theRing)
 }
 
 // COMMIT YOUR WORK
