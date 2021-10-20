@@ -178,7 +178,7 @@ function forgeTheFellowShip() {
 	// create a new div called `'the-fellowship'` within `rivendell`
 	const fellowshipDiv = document.createElement('div')
 	const ul = document.createElement('ul')
-	fellowshipDiv.id = 'the-fellowship'
+	ul.id = 'the-fellowship'
 	document.getElementById('Rivendell').appendChild(fellowshipDiv)
 	fellowshipDiv.appendChild(ul)
 	const theFellowship = fellowshipDiv.firstElementChild
@@ -222,8 +222,11 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+	alert('The Horn of Gondor has been blown!')
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+	const boromir = document.getElementsByClassName('buddy')[4]
+	document.getElementById('the-fellowship').removeChild(boromir)
 }
 
 // COMMIT YOUR WORK
@@ -236,7 +239,15 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	const frodo = document.getElementsByClassName('hobbit')[0]
+	const sam = document.getElementsByClassName('hobbit')[1]
+	const mordor = document.getElementById('Mordor')
+	mordor.appendChild(frodo)
+	mordor.appendChild(sam)
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const doomDiv = document.createElement('div')
+	doomDiv.id = 'mount-doom'
+	mordor.appendChild(doomDiv)
 }
 
 // COMMIT YOUR WORK
