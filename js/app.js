@@ -171,7 +171,7 @@ function makeBuddies() {
 	for (i = 0; i < buddies.length; i++) {
 		// give each of the buddies a class of "buddy"
 		const liBuddy = document.createElement('li')
-		liBuddy.className = 'baddy'
+		liBuddy.className = 'buddy'
 		liBuddy.textContent = buddies[i]
 		ulBuddies.appendChild(liBuddy)
 	}
@@ -195,15 +195,6 @@ function leaveTheShire() {
 	const caravan = shire.removeChild(hobbits)
 	document.getElementById('Rivendell').appendChild(caravan)
 
-
-	// let childrenToRemove = document.getElementsByClassName('hobbit')
-	// console.log(childrenToRemove.innerText)
-	
-	// for (i = 0; i < childrenToRemove.length; i++){
-	// 	const gatheredHobbitLi = document.getElementById('hobbits').removeChild(childrenToRemove[i])
-	// 	document.getElementById('buddies').appendChild(gatheredHobbitLi)
-	// };
-	
 }
 
 // COMMIT YOUR WORK
@@ -217,6 +208,10 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	const buddyList = document.getElementsByClassName('buddy')
+	console.log(buddyList[3])
+	buddyList[3].textContent = 'Aragorn'
+
 }
 
 // COMMIT YOUR WORK
