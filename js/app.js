@@ -190,6 +190,20 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	const hobbits = document.getElementById('hobbits')
+	const shire = document.getElementById('The-Shire')
+	const caravan = shire.removeChild(hobbits)
+	document.getElementById('Rivendell').appendChild(caravan)
+
+
+	// let childrenToRemove = document.getElementsByClassName('hobbit')
+	// console.log(childrenToRemove.innerText)
+	
+	// for (i = 0; i < childrenToRemove.length; i++){
+	// 	const gatheredHobbitLi = document.getElementById('hobbits').removeChild(childrenToRemove[i])
+	// 	document.getElementById('buddies').appendChild(gatheredHobbitLi)
+	// };
+	
 }
 
 // COMMIT YOUR WORK
