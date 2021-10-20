@@ -322,7 +322,6 @@ function weWantsIt() {
 	const mordor = document.getElementById('Mordor')
 	mordor.appendChild(gollum)
 
-
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	const theRing = document.getElementById('the-ring')
 	const hobbits = document.getElementsByClassName('hobbit')
@@ -341,7 +340,22 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	const gollum = document.getElementById('gollum')
+	const theRing = document.getElementById('the-ring')
+	const mordor = document.getElementById('Mordor')
+	gollum.removeChild(theRing)
+	mordor.removeChild(gollum)
+
 	// Move all the `hobbits` back to `the shire`
+	const hobbits = document.getElementsByClassName('hobbit')
+	console.log(`${hobbits[0].textContent}, ${hobbits[1].textContent}, ${hobbits[2].textContent}, ${hobbits[3].textContent}`)
+	const pippin = document.getElementById('hobbits').removeChild(hobbits[0])
+	const frodo = mordor.removeChild(hobbits[2])
+	const sam = mordor.removeChild(hobbits[3])
+	for (i = 0; i < hobbits.length; i++) {
+		document.getElementById('The-Shire').appendChild(hobbits[i])
+	}
+	const merry = document.getElementById('the-fellowship').removeChild(hobbits[1])
 }
 
 // COMMIT YOUR WORK
