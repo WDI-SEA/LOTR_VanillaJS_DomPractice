@@ -41,7 +41,7 @@ function makeMiddleEarth () {
   
   const section = document.createElement("section") 
     section.id = "middle-earth";
-    // console.log(section);
+    // console.log('the first section', section);
 
   // 2. use a for loop to iterate over the lands array that does the following:
   for(let i = 0; i < lands.length; i++) {
@@ -154,6 +154,7 @@ function makeBuddies () {
   console.log("5: makeBuddies");
 
   const rivendell = document.getElementById("Rivendell");
+  console.log('this should be rivendell', rivendell)
   // create an `aside` tag
   const asideBuddies = document.createElement("aside");
   asideBuddies.id = "buddies";
