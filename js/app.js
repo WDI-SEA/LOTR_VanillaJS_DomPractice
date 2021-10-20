@@ -231,12 +231,12 @@ function forgeTheFellowShip() {
 	const hobbits = document.getElementsByClassName('hobbit')
 	for (i = 0; i < hobbits.length; i++) {
 		theFellowship.appendChild(hobbits[i])
-		// alert(`${hobbits[i].textContent} has joined your party`)
+		alert(`${hobbits[i].textContent} has joined your party`)
 	}
 	const buddies = document.getElementsByClassName('buddy')
 	for (i = 0; i < buddies.length; i++) {
 		theFellowship.appendChild(buddies[i])
-		// alert(`${buddies[i].textContent} has joined your party`)
+		alert(`${buddies[i].textContent} has joined your party`)
 	}
 
 	// after each character is added make an alert that they // have joined your party
@@ -349,13 +349,22 @@ function thereAndBackAgain() {
 	// Move all the `hobbits` back to `the shire`
 	const hobbits = document.getElementsByClassName('hobbit')
 	console.log(`${hobbits[0].textContent}, ${hobbits[1].textContent}, ${hobbits[2].textContent}, ${hobbits[3].textContent}`)
-	const pippin = document.getElementById('hobbits').removeChild(hobbits[0])
-	const frodo = mordor.removeChild(hobbits[2])
-	const sam = mordor.removeChild(hobbits[3])
-	for (i = 0; i < hobbits.length; i++) {
-		document.getElementById('The-Shire').appendChild(hobbits[i])
-	}
-	const merry = document.getElementById('the-fellowship').removeChild(hobbits[1])
+	const pippin = hobbits[0]
+	const merry = hobbits[1]
+	const frodo = hobbits[2]
+	const sam = hobbits[3]
+	const shire = document.getElementById('The-Shire')
+
+	const pippinOnFoot = document.getElementById('hobbits').removeChild(pippin)
+	shire.appendChild(pippinOnFoot)
+	const merryOnFoot = document.getElementById('the-fellowship').removeChild(merry)
+	shire.appendChild(merryOnFoot)
+	const frodoOnFoot = mordor.removeChild(frodo)
+	shire.appendChild(frodoOnFoot)
+	const samOnFoot = mordor.removeChild(sam)
+	shire.appendChild(samOnFoot)
+
+	
 }
 
 // COMMIT YOUR WORK
