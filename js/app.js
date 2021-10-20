@@ -199,13 +199,13 @@ function forgeTheFellowShip() {
 	console.log(rivendell.childNodes[1].childNodes[0])
 	let i = 0
 	while (i < 5) {
-		console.log(`${rivendell.childNodes[1].childNodes[0].innerText} has joined the fellowship`)
+		alert(`${rivendell.childNodes[1].childNodes[0].innerText} has joined the fellowship`)
 		theFellowshipUl.appendChild(rivendell.childNodes[1].childNodes[0])
 		i++
 	}
 	let j = 0
 	while (j < 4) {
-		console.log(`${rivendell.childNodes[2].childNodes[0].innerText} has joined the fellowship`)
+		alert(`${rivendell.childNodes[2].childNodes[0].innerText} has joined the fellowship`)
 		theFellowshipUl.appendChild(rivendell.childNodes[2].childNodes[0])
 		j++
 	}
