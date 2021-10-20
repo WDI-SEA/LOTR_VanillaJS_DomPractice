@@ -126,6 +126,7 @@ function makeBuddies() {
 	for (i = 0; i < buddies.length; i++){
 		const li = document.createElement('li')
 		li.innerText = buddies[i]
+		li.className = 'buddy'
 		aside.appendChild(li)
 	}
 	aside.appendChild(goodGuys)
@@ -145,9 +146,7 @@ function leaveTheShire() {
 
 	// assemble the `hobbits` and move them to `rivendell`
 	const shireParty = document.getElementById('hobbit-list')
-	
-	document.getElementById('Rivendell').appendChild(shireParty)
-	
+	document.getElementById('Rivendell').appendChild(shireParty)	
 }
 
 // COMMIT YOUR WORK
@@ -158,8 +157,9 @@ function leaveTheShire() {
 // ============
 
 function beautifulStranger() {
+	const aragorn = document.getElementsByClassName('buddy')[3]
 	console.log('7: beautifulStranger')
-
+	aragorn.innerHTML = 'Aragorn'
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
