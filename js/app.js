@@ -304,12 +304,13 @@ function weWantsIt() {
 	setTimeout(()=>{
 		const gollumPlace = document.createElement('div')
 		gollumPlace.id = "gollum"
+		poorGollum = document.querySelector("#gollum")
 		mordorLand.appendChild(gollumPlace)
 		// Remove `the ring` from `Frodo` and give it to `Gollum`
 		const theOneRing = document.querySelector('#the-ring')
-		gollumPlace.appendChild(theOneRing)
+		poorGollum.appendChild(theOneRing)
 		// Move Gollum into Mount Doom
-		mountDoom.appendChild(gollumPlace)
+		mountDoom.appendChild(poorGollum)
 	}, 3000)
 
 }
@@ -322,20 +323,31 @@ function weWantsIt() {
 // ============
 
 function thereAndBackAgain() {
+	const gollumPlace = document.createElement('div')
+	const theOneRing = document.querySelector('#the-ring')
 	console.log('13: thereAndBackAgain')
+	gollumPlace.remove()
+	theOneRing.remove()
 	// remove `Gollum` and `the Ring` from the document
 	// Move all the `hobbits` back to `the shire`
+	const theShire = document.getElementById('The-Shire')
+	const hobbitList = document.querySelector("ul#hobbit")
+
+	theShire.appendChild(hobbitList)
+
+	hobbitsReturn = document.querySelectorAll("li.hobbits")
+
+	hobbitsReturn.forEach((hobbit) => {
+		hobbitList.appendChild(hobbit)
+	})
+
+
 }
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
 
 
-
-
-
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
 
 // =====================================
 // Don't change anything below this line
