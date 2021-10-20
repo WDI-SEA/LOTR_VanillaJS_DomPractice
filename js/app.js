@@ -21,6 +21,7 @@ const lands = ['The-Shire', 'Rivendell', 'Mordor']
 function makeMiddleEarth() {
 	console.log('1: makeMiddleEarth')
 
+ for (let )
 	// 1. create a section tag with an id of middle-earth
 
 	// 2. use a for loop to iterate over the lands array that does the following:
