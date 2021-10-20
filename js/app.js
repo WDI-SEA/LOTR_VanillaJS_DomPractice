@@ -246,9 +246,27 @@ function theBalrog() {
 
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
+	setTimeout(()=>{
+		alert("The Horn of Gondor has been blown!")
+		var hornOfGondor = new Audio('media/(horn-of-gondor-blows)-v3x.mp3');
+		hornOfGondor.play();
+	}, 300)
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
+	
 	// Remove `Boromir` from the Fellowship
+	removeBoromir = document.querySelectorAll("#the-fellowship li.buddy")[4]
+	removeBoromir.style.color = "red"
+	removeBoromir.style.backgroundColor = "#af111c"
+	setTimeout(()=>{
+		removeBoromir.style.color = "red"
+		removeBoromir.style.backgroundColor = "#af111c"
+	}, 4000)
+
+	setTimeout(()=>{
+
+		removeBoromir.remove()
+	}, 6000)
 }
 
 // COMMIT YOUR WORK
@@ -260,6 +278,15 @@ function hornOfGondor() {
 
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
+	mordorLand = document.querySelector("#Mordor")
+	frodoSelect = document.querySelectorAll("#the-fellowship li.hobbits")[0]
+	samSelect = document.querySelectorAll("#the-fellowship li.hobbits")[1]
+	mordorLand.appendChild(frodoSelect)
+	mordorLand.appendChild(samSelect)
+	mountDoom = document.createElement('div')
+	mountDoom.id = "mount-doom"
+	mordorLand.append(mountDoom)
+	
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
 }
