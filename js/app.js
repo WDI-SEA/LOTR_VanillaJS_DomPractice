@@ -86,7 +86,10 @@ function keepItSecretKeepItSafe() {
 	// give the div a class of `'magic-imbued-jewelry'`
 	oneRingDiv.className = 'magic-imbued-jewelry'
 	// add the ring as a child of `Frodo`
-	
+	const ulHobbits = document.querySelector('#hobbits')
+	const hobbitsArray = ulHobbits.children
+	const frodoLi = hobbitsArray[0]
+	frodoLi.appendChild(oneRingDiv)
 }
 
 // COMMIT YOUR WORK
@@ -100,10 +103,17 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
-
+	const mordor = document.getElementById('Mordor')
+	const ulBaddies = document.createElement('ul')
+	ulBaddies.id = 'baddies'
+	for(let i = 0;i < baddies.length; i++) {
+	const liBaddy = document.createElement('li')
 	// give each of the baddies a class of "baddy"
-
+	liBaddy.className = 'baddy'
+	liBaddy.textContent = baddies[i]
+	ulBaddies.appendChild(liBaddy)}
 	// remember to append them to Mordor
+	mordor.appendChild(ulBaddies)
 }
 
 // COMMIT YOUR WORK
