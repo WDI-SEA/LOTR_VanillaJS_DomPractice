@@ -199,6 +199,7 @@ function forgeTheFellowShip() {
 	// create a new div called `'the-fellowship'` within `rivendell`
 	const theFellowShip = document.createElement('div')
 	theFellowShip.id = 'the-fellowship'
+	theFellowShip.textContent = 'The Fellowship'
 	const rivendell = document.getElementById('Rivendell')
 	rivendell.appendChild(theFellowShip)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
@@ -273,6 +274,7 @@ function itsDangerousToGoAlone() {
 	// add a div with an id of `'mount-doom'` to `Mordor`
 	const mountDoomDiv = document.createElement('div')
 	mountDoomDiv.id = 'mount-doom'
+	mountDoomDiv.textContent = 'Mount Doom'
 	mordor.appendChild(mountDoomDiv)
 }
 
@@ -286,8 +288,18 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	const gollumDiv = document.createElement('div')
+	gollumDiv.id = 'gollum'
+	gollumDiv.textContent = 'Gollum'
+	const mordor = document.getElementById('Mordor')
+	mordor.appendChild(gollumDiv)
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	const theRing = document.getElementById('the-ring')
+	gollumDiv.appendChild(theRing)
 	// Move Gollum into Mount Doom
+	const mountDoom = document.getElementById('mount-doom')
+	mountDoom.appendChild(gollumDiv)
+
 }
 
 // COMMIT YOUR WORK
@@ -300,7 +312,18 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	const gollum = document.getElementById('gollum')
+	const theRing = document.getElementById('the-ring')
+	gollum.removeChild(theRing)
+	const mountDoom = document.getElementById('mount-doom')
+	mountDoom.removeChild(gollum)
 	// Move all the `hobbits` back to `the shire`
+	const theShire = document.getElementById('The-Shire')
+	const theHobbits = document.querySelectorAll('.hobbit')
+		for (let i = 0; i < theHobbits.length; i++){
+			theShire.appendChild(document.getElementById(`${theHobbits[i].textContent}`))
+		}
+	// theShire.appendChild(theHobbits)
 }
 
 // COMMIT YOUR WORK
