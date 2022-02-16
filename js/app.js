@@ -55,6 +55,7 @@ function makeMiddleEarth() {
 function makeHobbits() {
 	console.log('2: makeHobbits')
 
+	// display an `unordered list` of hobbits in the shire
 	// how can I get, 'the shire'? how can I append a ul to it?
 	// I can use querySelector, like this
 	// const theShire = document.querySelector('#The-Shire')
@@ -151,10 +152,23 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
+	const aside = document.createElement('aside')
 
 	// put an `unordered list` of the `'buddies'` in the aside
+	const ulBuddies = document.createElement('ul')
+	ulBuddies.id = 'buddy'
+	for (let i = 0; i < buddies.length; i++) {
+		const liBuddy = document.createElement('li')
+		liBuddy.className = 'buddy'
+		liBuddy.textContent = buddies[i]
+		ulBuddies.appendChild(liBuddy)
+	
+	aside.appendChild(ulBuddies)
 
 	// insert your aside as a child element of `rivendell`
+	const rivendell = document.getElementById('Rivendell')
+	rivendell.appendChild(aside)
+	}
 }
 
 // COMMIT YOUR WORK
@@ -168,6 +182,7 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	
 }
 
 // COMMIT YOUR WORK
