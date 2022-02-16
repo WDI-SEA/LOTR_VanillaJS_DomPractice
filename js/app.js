@@ -127,10 +127,24 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
-
+	const rivendell = document.getElementById('Rivendell')
+	const mBuddies = document.createElement('aside')
+	mBuddies.id = 'buddies'
+	//console.log(`this is my buddies + ${mBuddies}`)
 	// put an `unordered list` of the `'buddies'` in the aside
-
+	const ulBuddies = document.createElement('ul')
+	//mBuddies.appendChild(ulBuddies)
+	for(let i =0; i<buddies.length; i++){
+		const liBuddy = document.createElement('li')
+		liBuddy.className = 'buddy'
+		liBuddy.textContent= buddies[i]
+		ulBuddies.appendChild(liBuddy)
+		console.log(ulBuddies)
+		console.log(liBuddy)
+	}
+	mBuddies.appendChild(ulBuddies)
 	// insert your aside as a child element of `rivendell`
+	rivendell.appendChild(mBuddies)
 }
 
 // COMMIT YOUR WORK
@@ -157,6 +171,7 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	buddies[3] = 'Aragorn'
 }
 
 // COMMIT YOUR WORK
@@ -169,6 +184,8 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const fellowship = document.createElement(div)
+	fellowship = getElementById('#Rivendell')
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
 
