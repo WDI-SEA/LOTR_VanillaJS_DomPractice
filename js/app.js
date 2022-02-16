@@ -194,11 +194,27 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const theFellowShip = document.createElement('div')
+	theFellowShip.id = 'the-fellowship'
+	const rivendell = document.getElementById('Rivendell')
+	rivendell.appendChild(theFellowShip)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	// after each character is added make an alert that they // have joined your party
-
+	const theHobbits = document.querySelectorAll('.hobbit')
+	const theBuddies = document.querySelectorAll('.buddy')
+	for (let i = 0; i < theHobbits.length; i++){
+		theFellowShip.appendChild(theHobbits[i])
+		// after each character is added make an alert that they // have joined your party
+		console.log(`${theHobbits[i]} has joined your party!`)
+	}
+	for (let i = 0; i < theBuddies.length; i++){
+		theFellowShip.appendChild(theBuddies[i])
+		console.log(`${theBuddies[i]} has joined your party!`)
+		}
+	}
+	
+	
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
-}
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
