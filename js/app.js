@@ -180,6 +180,8 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	const theBuddies = document.querySelectorAll('.buddy')
+	theBuddies[3].textContent = 'Aragorn'
 }
 
 // COMMIT YOUR WORK
