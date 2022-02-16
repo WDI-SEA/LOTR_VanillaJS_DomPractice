@@ -154,10 +154,20 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
-
+	const rivendell = document.getElementById("Rivendell")
+	const aside = document.createElement("aside")
+	const ulBuddies = document.createElement("ul")
+	ulBuddies.id = "buddies"
 	// put an `unordered list` of the `'buddies'` in the aside
-
+	for (let i = 0; i < buddies.length; i++) {
+		const liBuddy = document.createElement("li")
+		liBuddy.className = "buddy"
+		liBuddy.textContent = buddies[i]
+		ulBuddies.appendChild(liBuddy)
+	}
+	aside.appendChild(ulBuddies)
 	// insert your aside as a child element of `rivendell`
+	rivendell.appendChild(aside)
 }
 
 // COMMIT YOUR WORK
