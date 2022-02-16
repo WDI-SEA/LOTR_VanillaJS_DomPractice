@@ -133,6 +133,7 @@ function makeBuddies() {
 	//console.log(`this is my buddies + ${mBuddies}`)
 	// put an `unordered list` of the `'buddies'` in the aside
 	const ulBuddies = document.createElement('ul')
+	ulBuddies.id = 'bud'
 	//mBuddies.appendChild(ulBuddies)
 	for(let i =0; i<buddies.length; i++){
 		const liBuddy = document.createElement('li')
@@ -173,11 +174,14 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-	const liBuddies = document.getElementById('buddies')
-	const arrayOfBuddies = liBuddies.children
-	arrayOfBuddies[3].textContent = 'Aragorn'
+	 const budArray = document.getElementById('bud')
+	ulBudArray = budArray.children
+	//console.log('this is the budarray' + budArray)
+	//const aragorn = ulBudArray.children[3].innerHTML = ('Aragorn')
+	//console.log(aragorn)
 	// change the `'Strider'` text to `'Aragorn'`
-
+	console.log(ulBudArray)
+	ulBudArray[3].innerHTML = 'Aragorn'
 	
 }
 
