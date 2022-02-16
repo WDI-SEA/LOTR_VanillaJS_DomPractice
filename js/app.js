@@ -62,6 +62,7 @@ function makeHobbits() {
 		const liHobbit = document.createElement('li')
 		// give each li a class of 'hobbit
 		liHobbit.className = 'hobbit'
+		liHobbit.id = hobbits[i]
 		// give each li some text
 		liHobbit.textContent = hobbits[i]
 		// append each hobbit to hobbits
@@ -117,6 +118,7 @@ function makeBaddies() {
 	for (let i = 0; i < baddies.length; i++){
 		const liBaddy = document.createElement('li')
 		liBaddy.className = 'baddy'
+		liBaddy.id = baddies[i]
 		liBaddy.textContent = baddies[i]
 		ulBaddies.appendChild(liBaddy)
 	}
@@ -139,10 +141,11 @@ function makeBuddies() {
 	const aside = document.createElement('aside')
 	// put an `unordered list` of the `'buddies'` in the aside
 	const ulBuddies = document.createElement('ul')
-	ulBuddies.id = buddies
+	ulBuddies.id = 'buddies'
 	for (let i = 0; i < buddies.length; i++){
 		const liBuddy = document.createElement('li')
 		liBuddy.className = 'buddy'
+		liBuddy.id = buddies[i]
 		liBuddy.textContent = buddies[i]
 		ulBuddies.appendChild(liBuddy)
 	}
@@ -204,11 +207,11 @@ function forgeTheFellowShip() {
 	for (let i = 0; i < theHobbits.length; i++){
 		theFellowShip.appendChild(theHobbits[i])
 		// after each character is added make an alert that they // have joined your party
-		console.log(`${theHobbits[i]} has joined your party!`)
+		console.log(`${theHobbits[i].textContent} has joined your party!`)
 	}
 	for (let i = 0; i < theBuddies.length; i++){
 		theFellowShip.appendChild(theBuddies[i])
-		console.log(`${theBuddies[i]} has joined your party!`)
+		console.log(`${theBuddies[i].textContent} has joined your party!`)
 		}
 	}
 	
@@ -226,7 +229,11 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	const gandalf = document.getElementById('Gandalf the Grey')
+	gandalf.innerText = 'Gandalf the White'
 	// apply the following style to the element, make the // background 'white', add a grey border
+	gandalf.style.background = 'white'
+	gandalf.style.borderColor = 'grey'
 }
 
 // COMMIT YOUR WORK
