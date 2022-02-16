@@ -193,10 +193,37 @@ function leaveTheShire() {
 // ============
 
 function beautifulStranger() {
-	console.log('7: beautifulStranger')
+	// console.log('7: beautifulStranger')
+	
+	const getStrider = document.getElementsByClassName("buddy")
+	buddyList = Object.values(getStrider)
+	buddyList.forEach((element) => {
+		if(element.textContent === "Strider") {
+			element.textContent = "Aragorn"
+		}
+	})
 
-	// change the `'Strider'` text to `'Aragorn'`
+	// const ulBuddies = document.getElementsByClassName("buddy")
+	// for (let i = 0; i < buddies.length; i++) {
+	// 	const liBuddy = document.createElement("li")
+	// 	liBuddy.textContent = buddies[i]
+	// 		if (buddies[i].innerText === "strider") {
+	// 		buddies[i].innerText = "Aragorn"
+		// }
+		
+	
+
+		
+		
+	
 }
+	// for (let i = 0; i < buddies.length; i++) {
+	// 	if (buddies[i] === "strider") {
+		// IDK if that even works
+	// 	} 
+	// }
+	// change the `'Strider'` text to `'Aragorn'`
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
