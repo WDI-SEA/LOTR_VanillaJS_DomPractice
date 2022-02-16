@@ -41,6 +41,10 @@ function makeMiddleEarth() {
 		section.appendChild(landArticle)
 	}
 
+	// 3. append the section to the body of the DOM.
+	document.body.appendChild(section)
+}
+
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
 
@@ -66,6 +70,7 @@ function makeHobbits() {
 // ============
 // Chapter 3
 // ============
+
 
 function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
