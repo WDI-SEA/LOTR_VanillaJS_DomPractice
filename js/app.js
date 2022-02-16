@@ -87,18 +87,30 @@ function makeHobbits() {
 // Chapter 3
 // ============
 
+
 function keepItSecretKeepItSafe() {
+	
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-
+	const oneRingDiv = document.createElement('div')
+	oneRingDiv.id = 'the-ring'
 	// give the div a class of `'magic-imbued-jewelry'`
+	oneRingDiv.className = 'magic-imbued-jewelry'
 
 	// add the ring as a child of `Frodo`
+	// first, we'll need to find the ul where frodo lives
+	// console.log(document.querySelector('#hobbits'))
+	const ulHobbits = document.querySelector('#hobbits')
+	
+	// next we'll need to figure out which li is frodo
+	// console.log('these are probs the hobs', ulHobbits.children)
+	const hobbitsArray = ulHobbits.children
+	// console.log('is this frodo?', hobbitsArray[0])
+	const frodoLi = hobbitsArray[0]
+	// then we can attach the ring to our frodo li
+	frodoLi.appendChild(oneRingDiv)
 }
-
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
 
 // ============
 // Chapter 4
@@ -108,14 +120,20 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
+	const mordor = document.getElementById('Mordor')
+	const ulBaddies = document.createElement('ul')
+	ulBaddies.id = 'baddies'
 
-	// give each of the baddies a class of "baddy"
-
+	for (let i = 0; i < baddies.length; i++) {
+		const liBaddy = document.createElement('li')
+		// give each of the baddies a class of "baddy"
+		liBaddy.className = 'baddy'
+		liBaddy.textContent = baddies[i]
+		ulBaddies.appendChild(liBaddy)
+	}
 	// remember to append them to Mordor
+	mordor.appendChild(ulBaddies)
 }
-
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 4 complete - Made the Baddies"..
 
 // ============
 // Chapter 5
@@ -125,10 +143,23 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
-
+	let toSide = document.createElement('aside');
 	// put an `unordered list` of the `'buddies'` in the aside
+	const ulBuddies = document.createElement('ul')
+	ulBuddies.id = 'buddies'
 
+	for (let i = 0; i < buddies.length; i++) {
+		const liBuddy = document.createElement('li')
+		liBuddy.className = 'buddy'
+		liBuddy.textContent = buddies[i]
+		ulBuddies.appendChild(liBuddy);
+		toSide.appendChild(ulBuddies);
+	}
 	// insert your aside as a child element of `rivendell`
+	console.log(ulBuddies);
+	console.log(toSide);
+	const rivendell = document.getElementById('Rivendell');
+	rivendell.appendChild(toSide);
 }
 
 // COMMIT YOUR WORK
