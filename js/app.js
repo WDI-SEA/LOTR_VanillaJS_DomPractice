@@ -128,23 +128,6 @@ function makeBaddies() {
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ============
 // Chapter 5
 // ============
@@ -173,21 +156,6 @@ function makeBuddies() {
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ============
 // Chapter 6
 // ============
@@ -196,6 +164,9 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	const theHobbits = document.getElementById('hobbits')
+	const rivendell = document.getElementById('Rivendell')
+	rivendell.appendChild(theHobbits)
 }
 
 // COMMIT YOUR WORK
