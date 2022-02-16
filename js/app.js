@@ -152,7 +152,9 @@ function makeBuddies() {
 		const liBuddy = document.createElement('li')
 		liBuddy.className = 'buddy'
 		liBuddy.textContent = buddies[i]
+		// liBuddy.id = buddies[i].toString();
 		ulBuddies.appendChild(liBuddy);
+
 		toSide.appendChild(ulBuddies);
 	}
 	// insert your aside as a child element of `rivendell`
@@ -176,7 +178,7 @@ function leaveTheShire() {
 	const rivendell = document.getElementById('Rivendell')
 
 	const hobbits = document.querySelector('#hobbits')
-	
+
 	rivendell.appendChild(hobbits);
 	}
 
@@ -191,9 +193,20 @@ function leaveTheShire() {
 // ============
 
 function beautifulStranger() {
-	console.log('7: beautifulStranger')
+	 console.log('7: beautifulStranger')
+	 
+	// const ulBuddies = document.getElementById('buddies')
+	// let Aragorn = ulBuddies.children[3]
+	let homies = document.querySelectorAll('.buddy')
+	let Aragorn = homies[3]
+	Aragorn.innerText = 'Aragorn'
+
+	console.log(Aragorn)
 
 	// change the `'Strider'` text to `'Aragorn'`
+	//.textContent = 'Aragorn'
+
+	
 }
 
 // COMMIT YOUR WORK
@@ -206,11 +219,37 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const fellowship = document.createElement('div');
+	fellowship.id = 'the-fellowship'
+	const rivendell = document.getElementById('Rivendell');
+	rivendell.appendChild(fellowship)
+
+
+
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+
+	//get each person within the hobbit class and buddy class
 	// after each character is added make an alert that they // have joined your party
 
+	let buddiesArray = document.querySelectorAll('.buddy')
+	
+	let hobbitsArray = document.querySelectorAll('.hobbit')
+
+	console.log(buddiesArray[1])
+
+
+
+	for (i = 0; i < hobbitsArray.length; i++){
+		fellowship.appendChild(hobbitsArray[i])
+		console.log(hobbitsArray[i] + " joined the Fellowship")
+	}
+	for (i = 0; i < buddiesArray.length; i++){
+		fellowship.appendChild(buddiesArray[i])
+		console.log(buddiesArray[i] + " joined the Fellowship")
+	}
+
+	}
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
-}
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
@@ -222,8 +261,14 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	let allBuddies = document.querySelectorAll('.buddy')
+	let gandalfChanged = allBuddies[0]
+	gandalfChanged.textContent = 'Gandalf the White'
 	// apply the following style to the element, make the // background 'white', add a grey border
+	gandalfChanged.style.backgroundColor = 'white'
+	gandalfChanged.style.border = '4px solid grey'
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
@@ -233,10 +278,21 @@ function theBalrog() {
 // ============
 
 function hornOfGondor() {
+	
 	console.log('10: hornOfGondor')
+	let theHorn = document.createElement('div')
+	theHorn.textContent = 'The horn of Gondor has been blown!'
 	// pop up an alert that the horn of gondor has been blown
+	console.log('The horn of Gondor has been blown!')
+
 	// Boromir's been killed by the Uruk-hai!
+	let allBuddies = document.querySelectorAll('.buddy')
+	console.log(allBuddies)
+	allBuddies[3].remove();
+	
+	
 	// Remove `Boromir` from the Fellowship
+
 }
 
 // COMMIT YOUR WORK
