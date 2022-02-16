@@ -157,7 +157,11 @@ function makeBuddies() {
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
-	// assemble the `hobbits` and move them to `rivendell`
+	// assemble the `hobbits` and move them to `rivendell` 
+	const moveHobbits = document.getElementById('hobbits')
+	const moveToRivendell = document.getElementById('Rivendell')
+	moveToRivendell.appendChild(moveHobbits)
+
 }
 
 // COMMIT YOUR WORK
@@ -169,9 +173,12 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+	const liBuddies = document.getElementById('buddies')
+	const arrayOfBuddies = liBuddies.children
+	arrayOfBuddies[3].textContent = 'Aragorn'
 	// change the `'Strider'` text to `'Aragorn'`
-	buddies[3] = 'Aragorn'
+
+	
 }
 
 // COMMIT YOUR WORK
@@ -184,8 +191,7 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
-	const fellowship = document.createElement(div)
-	fellowship = getElementById('#Rivendell')
+	
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
 
