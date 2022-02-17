@@ -209,11 +209,11 @@ function forgeTheFellowShip() {
 	for(let i =0; i<5; i++){
 		theFellowship.appendChild(buddyArray[i])
 		console.log(theFellowship)
-		alert(`${buddyArray[i].textContent} has joined your party`)
+		//alert(`${buddyArray[i].textContent} has joined your party`)
 	}
 	for(let i=0; i<4; i++) {
 		theFellowship.appendChild(hobbitArray[i])
-		alert(`${hobbitArray[i].textContent} has joined your party`)
+		//alert(`${hobbitArray[i].textContent} has joined your party`)
 		console.log(hobbitArray)
 	}
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
@@ -248,9 +248,9 @@ function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	const fellowship = document.getElementById('div')
 	// pop up an alert that the horn of gondor has been blown
-	alert("The horn of gondor has been blown")
+	//alert("The horn of gondor has been blown")
 	// Boromir's been killed by the Uruk-hai!
-	alert("The Boromir's been killed by the Uruk-hai!")
+	//alert("The Boromir's been killed by the Uruk-hai!")
 	// Remove `Boromir` from the Fellowship
 	document.getElementById("Boromir").remove()
 }
@@ -288,8 +288,18 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	const gollum = document.createElement('div')
+	const fellowship = document.getElementById('The-Fellowship')
+	gollum.id = 'gollum'
+	Mordor.appendChild(gollum)
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	const Frodo = Mordor.children[2]
+	const ring = document.getElementById('the-ring')
+	Frodo.removeChild(ring)
+	gollum.appendChild(ring)
 	// Move Gollum into Mount Doom
+	const mountDoom = document.getElementById('mount-doom')
+	mountDoom.appendChild(gollum)
 }
 
 // COMMIT YOUR WORK
