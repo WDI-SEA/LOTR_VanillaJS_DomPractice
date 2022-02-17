@@ -2,10 +2,10 @@ console.log('Linked.')
 
 // Dramatis Personae
 const hobbits = [
-	`Frodo Baggins`,
-	`Samwise "Sam" Gamgee`,
-	`Meriadoc "Merry" Brandybuck`,
-	`Peregrin "Pippin" Took`,
+	'Frodo Baggins',
+	'Samwise "Sam" Gamgee',
+	'Meriadoc "Merry" Brandybuck',
+	'Peregrin "Pippin" Took',
 ]
 
 const buddies = ['Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir']
@@ -201,17 +201,19 @@ function forgeTheFellowShip() {
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	const buddy = document.getElementsByClassName('buddy')
 	const hobbit =document.getElementsByClassName('hobbit')
-	const hobbitArray = Object.values(hobbits)
+	const hobbitArray = Object.values(hobbit)
 	const buddyArray = Object.values(buddy)
-	console.log(hobbitArray)
+	//console.log(hobbitArray)
 	// after each character is added make an alert that they // have joined your party
 	for(let i =0; i<5; i++){
 		theFellowship.appendChild(buddyArray[i])
-		console.log(`${buddyArray[i].textContent} has joined your party`)
+		console.log(theFellowship)
+		alert(`${buddyArray[i].textContent} has joined your party`)
 	}
 	for(let i=0; i<4; i++) {
 		theFellowship.appendChild(hobbitArray[i])
-		console.log(`${hobbitArray[i].textContent} has joined your party`)
+		alert(`${hobbitArray[i].textContent} has joined your party`)
+		console.log(hobbitArray)
 	}
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
@@ -225,8 +227,10 @@ function forgeTheFellowShip() {
 
 function theBalrog() {
 	console.log('9: theBalrog')
+	
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
+
 }
 
 // COMMIT YOUR WORK
