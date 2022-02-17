@@ -383,3 +383,4 @@ document.getElementById('all-chapters').addEventListener('click', () => {
 	weWantsIt()
 	thereAndBackAgain()
 })
+
