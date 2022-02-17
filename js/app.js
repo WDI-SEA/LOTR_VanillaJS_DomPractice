@@ -280,6 +280,7 @@ function theBalrog() {
 function hornOfGondor() {
 	
 	console.log('10: hornOfGondor')
+	window.alert("The horn of Gondor has been blown!");
 	let theHorn = document.createElement('div')
 	theHorn.textContent = 'The horn of Gondor has been blown!'
 	// pop up an alert that the horn of gondor has been blown
@@ -306,6 +307,13 @@ function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	let mountDoom = document.createElement('div')
+	mountDoom.id = 'mount-doom'
+	let hobbitsArray = document.querySelectorAll('.hobbit')
+	let mordor = getElementById('Mordor')
+	mordor.appendChild(hobbitsArray[0])
+	mordor.appendChild(hobbitsArray[1])
+
 }
 
 // COMMIT YOUR WORK
