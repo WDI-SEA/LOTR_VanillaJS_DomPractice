@@ -139,6 +139,7 @@ function makeBuddies() {
 		const liBuddy = document.createElement('li')
 		liBuddy.className = 'buddy'
 		liBuddy.textContent= buddies[i]
+		liBuddy.id=buddies[i]
 		ulBuddies.appendChild(liBuddy)
 		console.log(ulBuddies)
 		console.log(liBuddy)
@@ -229,8 +230,11 @@ function theBalrog() {
 	console.log('9: theBalrog')
 	
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	const changeGandalf = document.getElementById('Gandalf the Grey')
+	changeGandalf.textContent = "Gandalf the White"
 	// apply the following style to the element, make the // background 'white', add a grey border
-
+	changeGandalf.style.backgroundColor = "white"
+	changeGandalf.style.border = "2px solid grey"
 }
 
 // COMMIT YOUR WORK
