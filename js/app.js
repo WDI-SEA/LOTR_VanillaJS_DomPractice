@@ -239,6 +239,11 @@ function forgeTheFellowShip() {
 		theFellowship.appendChild(hobbit)
 		alert(hobbit.textContent + " has joined the party!!!!" )
 	})
+	const ulBuddies = document.querySelectorAll(".buddy")
+	ulBuddies.forEach(buddy => {
+		theFellowship.appendChild(buddy)
+		alert(buddy.textContent + " has joined the party!")
+	})
 	// theFellowship.appendChild(ulHobbits)
 	// ulHobbits.childNodes.forEach((hobbit) => ulHobbits.appendChild(hobbit))
 
