@@ -344,7 +344,21 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	const mountDoom = document.querySelector("#mount-doom")
+	const mountDoomArray = mountDoom.children
+	const gollum = document.querySelector("#gollum")
+	mountDoom.removeChild(gollum)
 	// Move all the `hobbits` back to `the shire`
+	const theShire = document.querySelector("#The-Shire")
+	const theFellowship = document.querySelector("#the-fellowship")
+	const mordor = document.querySelector("#Mordor")
+	const mordorArray = mordor.children
+	const theFellowshipArray = theFellowship.children
+
+	theShire.appendChild(mordorArray[2])
+	theShire.appendChild(mordorArray[2])
+	theShire.appendChild(theFellowshipArray[0])
+	theShire.appendChild(theFellowshipArray[0])
 }
 
 // COMMIT YOUR WORK
