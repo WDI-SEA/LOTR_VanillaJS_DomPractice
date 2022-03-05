@@ -312,6 +312,7 @@ function weWantsIt() {
 	gollum.appendChild(theRing)
 	// Move Gollum into Mount Doom
 	const mountDoom = document.getElementById('mount-doom')
+	mountDoom.appendChild(gollum);
 }
 
 // COMMIT YOUR WORK
@@ -324,14 +325,22 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
-	const gollum = document.getElementById('gollum')
-	const theRing = document.getElementById('the-ring')
-	gollum.remove()
-	theRing.remove()
+	const mordor = document.getElementById('Mordor')
+	const mountDoom = document.getElementById('mount-doom')
+
+	const mountDoomDwellers = mountDoom.children
+	mountDoomDwellers[0].remove();
+
 	// Move all the `hobbits` back to `the shire`
-	allTheHobbits = document.querySelectorAll('#hobbits')
-	theShire = document.getElementById('The-Shire')
-	theShire.appendChild(allTheHobbits)
+	const theShire = document.getElementById('The-Shire')
+	const theFellowship = document.getElementById('the-fellowship')
+	const mordorDwellers = mordor.children
+	const theFellowshipArray = theFellowship.children
+
+	theShire.appendChild(mordorDwellers[2]);
+	theShire.appendChild(mordorDwellers[2]);
+	theShire.appendChild(theFellowshipArray[0]);
+	theShire.appendChild(theFellowshipArray[0]);
 }
 
 // COMMIT YOUR WORK
