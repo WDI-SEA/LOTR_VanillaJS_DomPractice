@@ -54,7 +54,7 @@ function makeHobbits() {
 
   // display an `unordered list` of hobbits in the shire
   let hobbitList = document.createElement("ul");
-  hobbitList.id = 'hobbits'
+  hobbitList.id = "hobbits";
   //   console.log(hobbitList);
   // give each hobbit a class of `hobbit`
   for (i = 0; i < hobbits.length; i++) {
@@ -100,7 +100,7 @@ function keepItSecretKeepItSafe() {
 function makeBaddies() {
   console.log("4: makeBaddies");
   let mordorList = document.createElement("ul");
-  mordorList.id = 'baddies'
+  mordorList.id = "baddies";
   //   console.log(hobbitList);
   // give each hobbit a class of `hobbit`
   for (i = 0; i < baddies.length; i++) {
@@ -109,13 +109,11 @@ function makeBaddies() {
     items.innerText = `${baddies[i]}`;
     mordorList.appendChild(items);
   }
-  let theMordor = document.getElementById('Mordor');
+  let theMordor = document.getElementById("Mordor");
   theMordor.appendChild(mordorList);
 }
- 
 
 //   // remember to append them to Mordor
-
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
@@ -127,22 +125,21 @@ function makeBaddies() {
 function makeBuddies() {
   console.log("5: makeBuddies");
   let rivendellList = document.createElement("ul");
-  rivendellList.id = 'buddies'
+  rivendellList.id = "buddies";
   for (i = 0; i < buddies.length; i++) {
     let items = document.createElement("li");
     items.setAttribute("class", "buddie");
     items.innerText = `${buddies[i]}`;
     rivendellList.appendChild(items);
   }
-  let theRivendell = document.getElementById('Rivendell');
+  let theRivendell = document.getElementById("Rivendell");
   theRivendell.appendChild(rivendellList);
 }
-  // create an `aside` tag
+// create an `aside` tag
 
-  // put an `unordered list` of the `'buddies'` in the aside
+// put an `unordered list` of the `'buddies'` in the aside
 
-  // insert your aside as a child element of `rivendell`
-
+// insert your aside as a child element of `rivendell`
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
@@ -153,11 +150,11 @@ function makeBuddies() {
 
 function leaveTheShire() {
   console.log("6: leaveTheShire");
-	let hobbitList = document.getElementById('hobbits');
-	console.log(hobbitList);
-	let Rivendell = document.getElementById("Rivendell");
-	console.log(Rivendell);
-	Rivendell.appendChild(hobbitList);
+  let hobbitList = document.getElementById("hobbits");
+  console.log(hobbitList);
+  let Rivendell = document.getElementById("Rivendell");
+  console.log(Rivendell);
+  Rivendell.appendChild(hobbitList);
   // assemble the `hobbits` and move them to `rivendell`
 }
 
@@ -173,11 +170,11 @@ function beautifulStranger() {
 
   // change the `'Strider'` text to `'Aragorn'`
 
-  let buddieList = document.getElementById('buddies');
+  let buddieList = document.getElementById("buddies");
   console.log(buddieList);
-  let strider = document.getElementsByClassName('buddie')[3]
+  let strider = document.getElementsByClassName("buddie")[3];
   console.log(strider);
-  strider.innerText = 'Aragorn';
+  strider.innerText = "Aragorn";
 }
 
 // COMMIT YOUR WORK
@@ -190,11 +187,29 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
   console.log("8: forgeTheFellowShip");
   // create a new div called `'the-fellowship'` within `rivendell`
-  // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-  // after each character is added make an alert that they // have joined your party
+  let rivendell = document.getElementById("Rivendell");
+  rivendell.id = "rivendell";
+  let fellowship = document.createElement("div");
+  rivendell.appendChild(fellowship);
+  fellowship.id = "fellowship";
 
-  // NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+  // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+  addBuddies = document.getElementsByClassName("buddie");
+  addHobbits = document.getElementsByClassName("hobbit");
+  console.log(addBuddies);
+  console.log(addHobbits);
+  // after each character is added make an alert that they // have joined your party
+  let newRivendell = document
+    .getElementById("Rivendell")
+    .querySelectorAll("li");
+  console.log(newRivendell);
+  newRivendell.forEach(li => {
+    newRivendell.appendChild(li);
+    alert(`${li.innerText} joined my party!`)
+  });
 }
+
+// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
