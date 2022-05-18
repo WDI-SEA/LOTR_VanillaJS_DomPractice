@@ -42,7 +42,6 @@ function makeMiddleEarth() {
   //   2d. appends each land to the middle-earth section
   // 3. append the section to the body of the DOM.
 }
-makeMiddleEarth();
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
 
@@ -55,6 +54,7 @@ function makeHobbits() {
 
   // display an `unordered list` of hobbits in the shire
   let hobbitList = document.createElement("ul");
+  hobbitList.id = 'hobbits'
   //   console.log(hobbitList);
   // give each hobbit a class of `hobbit`
   for (i = 0; i < hobbits.length; i++) {
@@ -87,9 +87,9 @@ function keepItSecretKeepItSafe() {
   ringContainer.id = "the-ring";
   // add the ring as a child of `Frodo`
   ringContainer.className = "magic-imbued-jewelry";
-  let hobbitList = document.querySelector('ul');
-let frodo = hobbitList.children[0];
-frodo.appendChild(ringContainer);
+  let hobbitList = document.querySelector("ul");
+  let frodo = hobbitList.children[0];
+  frodo.appendChild(ringContainer);
   // COMMIT YOUR WORK
   // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
 }
@@ -99,13 +99,33 @@ frodo.appendChild(ringContainer);
 
 function makeBaddies() {
   console.log("4: makeBaddies");
+  let mordorList = document.createElement("ul");
+  mordorList.id = 'baddies'
+  //   console.log(hobbitList);
+  // give each hobbit a class of `hobbit`
+  for (i = 0; i < baddies.length; i++) {
+    let items = document.createElement("li");
+    items.setAttribute("class", "baddie");
+    items.innerText = `${baddies[i]}`;
+    mordorList.appendChild(items);
+  }
+  let theMordor = document.getElementById('Mordor');
+  theMordor.appendChild(mordorList);
 
-  // display an unordered list of baddies in Mordor
-
-  // give each of the baddies a class of "baddy"
-
-  // remember to append them to Mordor
+  // hint: create a 'ul' outside the loop into which to append the 'li's
 }
+  // hint: get 'The-Shire' by using its id
+//   let modorList = document.getElementById("Modor");
+// 	let mordor = document.getElementById
+//   // display an unordered list of baddies in Mordor
+//   let baddiesUl = document.createElement("ul");
+//   baddiesUl.id = 'baddies';
+//   // give each of the baddies a class of "baddy"
+//   for (let a = 0; a < baddies.length; a++){
+
+//   }};
+//   // remember to append them to Mordor
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
