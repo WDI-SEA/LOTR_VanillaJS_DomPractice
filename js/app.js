@@ -111,19 +111,9 @@ function makeBaddies() {
   }
   let theMordor = document.getElementById('Mordor');
   theMordor.appendChild(mordorList);
-
-  // hint: create a 'ul' outside the loop into which to append the 'li's
 }
-  // hint: get 'The-Shire' by using its id
-//   let modorList = document.getElementById("Modor");
-// 	let mordor = document.getElementById
-//   // display an unordered list of baddies in Mordor
-//   let baddiesUl = document.createElement("ul");
-//   baddiesUl.id = 'baddies';
-//   // give each of the baddies a class of "baddy"
-//   for (let a = 0; a < baddies.length; a++){
+ 
 
-//   }};
 //   // remember to append them to Mordor
 
 
@@ -136,13 +126,23 @@ function makeBaddies() {
 
 function makeBuddies() {
   console.log("5: makeBuddies");
-
+  let rivendellList = document.createElement("ul");
+  rivendellList.id = 'buddies'
+  for (i = 0; i < buddies.length; i++) {
+    let items = document.createElement("li");
+    items.setAttribute("class", "buddie");
+    items.innerText = `${buddies[i]}`;
+    rivendellList.appendChild(items);
+  }
+  let theRivendell = document.getElementById('Rivendell');
+  theRivendell.appendChild(rivendellList);
+}
   // create an `aside` tag
 
   // put an `unordered list` of the `'buddies'` in the aside
 
   // insert your aside as a child element of `rivendell`
-}
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
