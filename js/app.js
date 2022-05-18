@@ -172,6 +172,12 @@ function beautifulStranger() {
   console.log("7: beautifulStranger");
 
   // change the `'Strider'` text to `'Aragorn'`
+
+  let buddieList = document.getElementById('buddies');
+  console.log(buddieList);
+  let strider = document.getElementsByClassName('buddie')[3]
+  console.log(strider);
+  strider.innerText = 'Aragorn';
 }
 
 // COMMIT YOUR WORK
