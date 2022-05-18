@@ -42,7 +42,7 @@ function makeMiddleEarth() {
   //   2d. appends each land to the middle-earth section
   // 3. append the section to the body of the DOM.
 }
-
+makeMiddleEarth();
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
 
@@ -55,7 +55,7 @@ function makeHobbits() {
 
   // display an `unordered list` of hobbits in the shire
   let hobbitList = document.createElement("ul");
-//   console.log(hobbitList);
+  //   console.log(hobbitList);
   // give each hobbit a class of `hobbit`
   for (i = 0; i < hobbits.length; i++) {
     let items = document.createElement("li");
@@ -63,12 +63,12 @@ function makeHobbits() {
     items.innerText = `${hobbits[i]}`;
     hobbitList.appendChild(items);
   }
-    // hint: create a 'ul' outside the loop into which to append the 'li's
-	
-    // hint: get 'The-Shire' by using its id
-let theShire = document.getElementById("The-Shire");
-theShire.appendChild(hobbitList);
-// document.getElementById("The-Shire").append(hobbitList);
+  // hint: create a 'ul' outside the loop into which to append the 'li's
+
+  // hint: get 'The-Shire' by using its id
+  let theShire = document.getElementById("The-Shire");
+  theShire.appendChild(hobbitList);
+  // document.getElementById("The-Shire").append(hobbitList);
 }
 
 // COMMIT YOUR WORK
@@ -80,17 +80,19 @@ theShire.appendChild(hobbitList);
 
 function keepItSecretKeepItSafe() {
   console.log("3: keepItSecretKeepItSafe");
-
   // create a div with an id of `'the-ring'`
+  let ringContainer = document.createElement("div");
 
   // give the div a class of `'magic-imbued-jewelry'`
-
+  ringContainer.id = "the-ring";
   // add the ring as a child of `Frodo`
+  ringContainer.className = "magic-imbued-jewelry";
+  let hobbitList = document.querySelector('ul');
+let frodo = hobbitList.children[0];
+frodo.appendChild(ringContainer);
+  // COMMIT YOUR WORK
+  // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
 }
-
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
-
 // ============
 // Chapter 4
 // ============
