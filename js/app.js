@@ -153,7 +153,11 @@ function makeBuddies() {
 
 function leaveTheShire() {
   console.log("6: leaveTheShire");
-
+	let hobbitList = document.getElementById('hobbits');
+	console.log(hobbitList);
+	let Rivendell = document.getElementById("Rivendell");
+	console.log(Rivendell);
+	Rivendell.appendChild(hobbitList);
   // assemble the `hobbits` and move them to `rivendell`
 }
 
