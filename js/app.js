@@ -191,6 +191,7 @@ function forgeTheFellowShip() {
   rivendell.id = "rivendell";
   let fellowship = document.createElement("div");
   rivendell.appendChild(fellowship);
+  fellowship.setAttribute('id', 'fellowship');
   fellowship.id = "fellowship";
 
   // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
@@ -199,12 +200,11 @@ function forgeTheFellowShip() {
   console.log(addBuddies);
   console.log(addHobbits);
   // after each character is added make an alert that they // have joined your party
-  let newRivendell = document
-    .getElementById("Rivendell")
-    .querySelectorAll("li");
+  const newRivendell = document.getElementById("Rivendell").querySelectorAll("li");
   console.log(newRivendell);
-  newRivendell.forEach(li => {
-    newRivendell.appendChild(li);
+
+  newRivendell.forEach(li =>{
+    fellowship.appendChild(li);
     alert(`${li.innerText} joined my party!`)
   });
 }
@@ -220,7 +220,13 @@ function forgeTheFellowShip() {
 
 function theBalrog() {
   console.log("9: theBalrog");
+  const fellowship = document.getElementById('fellowship');
+  fellowshipBuddies = document.getElementsByClassName('buddie')
+  fellowshipBuddies[0].innerText = 'Gandalf the White'
   // change the `'Gandalf'` text to `'Gandalf the White'`
+  fellowshipBuddies[0].style.background = "white"
+  fellowshipBuddies[0].style.border = '4px grey dashed'
+  fellowshipBuddies[0].style.color = 'black'
   // apply the following style to the element, make the // background 'white', add a grey border
 }
 
