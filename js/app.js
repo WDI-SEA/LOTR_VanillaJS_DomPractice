@@ -308,7 +308,7 @@ function weWantsIt() {
 // // Chapter 13
 // // ============
 
-function thereAndBackAgain() {
+function  thereAndBackAgain() {
   console.log("13: thereAndBackAgain");
   // remove `Gollum` and `the Ring` from the document
   let gollum = document.getElementById('gollum')
