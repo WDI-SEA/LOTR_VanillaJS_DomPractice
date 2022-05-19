@@ -202,18 +202,18 @@ function forgeTheFellowShip() {
   fellowship.setAttribute('id', 'fellowship');
 console.log(fellowship);
   // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-  addBuddies = document.getElementsByClassName("buddie");
-  addHobbits = document.getElementsByClassName("hobbit");
+  // addBuddies = document.getElementsByClassName("buddie");
+  // addHobbits = document.getElementsByClassName("hobbit");
   buddies.forEach( buddie => {
     const buddieLi = document.createElement('li')
     buddieLi.innerText = buddie
-    fellowship.appendChild(buddieLi);
+    // fellowship.appendChild(buddieLi);
     alert(`${buddieLi.innerText} joined my party!`)
   })
   hobbits.forEach( hobbit => {
     const hobbitLi = document.createElement('li')
     hobbitLi.innerText = hobbit
-    fellowship.appendChild(hobbitLi);
+    // fellowship.appendChild(hobbitLi);
     alert(`${hobbitLi.innerText} joined my party!`)
   })}
   // after each character is added make an alert that they // have joined your party
@@ -246,16 +246,16 @@ function theBalrog() {
 // // Chapter 10
 // // ============
 
-function hornOfGondor() {}
+function hornOfGondor() {
   console.log("10: hornOfGondor");
-//   // pop up an alert that the horn of gondor has been blown
-//   alert((`THE HORN OF GONDOR HAS BEEN BLOWN!!!!`));
-//   // Boromir's been killed by the Uruk-hai!
-//   // Remove `Boromir` from the Fellowship
-//   const fellowshipDeath = document.getElementById('fellowship')
-//   console.log(fellowshipDeath);
-//   fellowship.removeChild(document.getElementsByClassName('buddie')[4]);
-// }
+  // pop up an alert that the horn of gondor has been blown
+  alert((`THE HORN OF GONDOR HAS BEEN BLOWN!!!!`));
+  // Boromir's been killed by the Uruk-hai!
+  // Remove `Boromir` from the Fellowship
+  const fellowshipDeath = document.getElementById('fellowship')
+  console.log(fellowshipDeath);
+  fellowship.removeChild(document.getElementsByClassName('buddie')[4]);
+}
 
 // // COMMIT YOUR WORK
 // // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
