@@ -206,14 +206,16 @@ console.log(fellowship);
   // addHobbits = document.getElementsByClassName("hobbit");
   buddies.forEach( buddie => {
     const buddieLi = document.createElement('li')
+    buddieLi.setAttribute('class', 'buddiesLi')
     buddieLi.innerText = buddie
-    // fellowship.appendChild(buddieLi);
+    fellowship.appendChild(buddieLi);
     alert(`${buddieLi.innerText} joined my party!`)
   })
   hobbits.forEach( hobbit => {
     const hobbitLi = document.createElement('li')
+    hobbitLi.setAttribute('class', 'hobbitsLi')
     hobbitLi.innerText = hobbit
-    // fellowship.appendChild(hobbitLi);
+    fellowship.appendChild(hobbitLi);
     alert(`${hobbitLi.innerText} joined my party!`)
   })}
   // after each character is added make an alert that they // have joined your party
@@ -253,8 +255,10 @@ function hornOfGondor() {
   // Boromir's been killed by the Uruk-hai!
   // Remove `Boromir` from the Fellowship
   const fellowshipDeath = document.getElementById('fellowship')
-  console.log(fellowshipDeath);
-  fellowship.removeChild(document.getElementsByClassName('buddie')[4]);
+  // console.log(fellowshipDeath);
+  let removeChar = document.getElementsByClassName('buddies'[4]);
+  console.log(removeChar);
+  fellowshipDeath.removeChild(removeChar);
 }
 
 // // COMMIT YOUR WORK
