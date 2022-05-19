@@ -321,7 +321,7 @@ function  thereAndBackAgain() {
     everyHobbit.forEach(hobbit => {
       hobbitsUl.appendChild(hobbit);
     })
-    theShire.append(hobbitsUl);
+    theShire.append(hobbitsUl);;
 }
 
 // COMMIT YOUR WORK
