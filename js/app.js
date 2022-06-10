@@ -61,6 +61,7 @@ const ul = document.createElement('ul')
 	// give each hobbit a class of `hobbit`
 for (let i = 0; i < hobbits.length; i++){
 	let li = document.createElement('li')
+	li.setAttribute('class', 'hobbits')
 	li.setAttribute('id', hobbits[i])
 	ul.appendChild(li)
 	li.innerText = hobbits[i]
@@ -109,7 +110,18 @@ function makeBaddies() {
 	// give each of the baddies a class of "baddy"
 
 	// remember to append them to Mordor
+	const ul = document.createElement("ul")
+	for (let i = 0; i < baddies.length; i++) {
+		let li = document.createElement("li")
+		li.setAttribute("id", baddies[i])
+		li.setAttribute("class", "baddy")
+		ul.appendChild(li)
+		li.innerText = baddies[i]
+		console.log(li)
+	}
+	document.getElementById(lands[2]).appendChild(ul)
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
@@ -126,6 +138,7 @@ function makeBuddies() {
 	// put an `unordered list` of the `'buddies'` in the aside
 
 	// insert your aside as a child element of `rivendell`
+
 }
 
 // COMMIT YOUR WORK
