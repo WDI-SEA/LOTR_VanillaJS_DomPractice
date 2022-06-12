@@ -98,7 +98,7 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
-
+const ul = document.createElement('ul')
 	// give each of the baddies a class of "baddy"
 
 	// remember to append them to Mordor
@@ -116,9 +116,17 @@ function makeBuddies() {
 
 	// create an `aside` tag
 let asideTag = document.createElement('aside')
-	// put an `unordered list` of the `'buddies'` in the aside
 
+	// put an `unordered list` of the `'buddies'` in the aside
+	buddyList = document.createElement('ul');
+	for (let i = 0; i < buddies.length; i++){
+		let buddy = document.createElement('li')
+		buddy.textContent = buddies[i]
+		buddyList.appendChild(buddy)
+	  }
 	// insert your aside as a child element of `rivendell`
+	aside.appendChild(buddyList)
+  rivendell.appendChild(aside)
 }
 
 // COMMIT YOUR WORK
