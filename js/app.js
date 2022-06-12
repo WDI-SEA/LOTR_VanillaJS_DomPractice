@@ -53,9 +53,16 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
+const theShire = document.getElementById('The-Shire')
+	let ul= document.createElement('ul')
 
 	// give each hobbit a class of `hobbit`
-
+	hobbits.forEach(function(hobbit) {
+let li = document.createElement('li')
+li.innerText = hobbits
+li.setAttribute('class', 'hobbit')
+ul.appendChild(li)
+})
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
@@ -72,10 +79,12 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-
+const newDiv = document.createElement('div')
+newDiv.setAttribute('id', 'the-ring')
 	// give the div a class of `'magic-imbued-jewelry'`
-
+newDiv.classList.add('magic-imbued-jewelry')
 	// add the ring as a child of `Frodo`
+frodo.appendChild(newDiv)
 }
 
 // COMMIT YOUR WORK
@@ -106,7 +115,7 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
-
+let asideTag = document.createElement('aside')
 	// put an `unordered list` of the `'buddies'` in the aside
 
 	// insert your aside as a child element of `rivendell`
