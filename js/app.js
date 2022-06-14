@@ -274,9 +274,17 @@ weWantsIt()
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
-	// Move all the `hobbits` back to `the shire`
-}
+	gollum.parentElement.removeChild(gollum)
 
+	// Move all the `hobbits` back to `the shire`
+	let hobbitUL = document.createElement('ul')
+  let hobbits = body.querySelectorAll('.hobbit')
+  for(let i = 0; i < hobbits.length; i++){
+    hobbitUL.appendChild(hobbits[i])
+  }
+  theShire.appendChild(hobbitUL)
+}
+thereAndBackAgain()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
 
