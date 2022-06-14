@@ -171,7 +171,7 @@ function beautifulStranger() {
 	// change the `'Strider'` text to `'Aragorn'`
 	strider.textContent = 'Aragon'
 }
-
+beautifulStranger()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
 
@@ -183,16 +183,16 @@ function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
 	let theFellowship = document.createElement('div')
-	theFellowship.setAttribute('id', 'the-fellowship');
+	theFellowship.setAttribute('id', 'the-fellowship');\
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	for (let i = 0; i < fellowshipMembers.length; i++){
-		theFellowship.appendChild(fellowshipMembers[i]);
+		theFellowship.appendChild(fellowshipMembers[i]);\
 	}
 	// after each character is added make an alert that they // have joined your party
 	rivendell.appendChild(theFellowship);
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
-
+forgeTheFellowShip()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
 
@@ -203,7 +203,10 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	gandalf.textContent = 'Gandalf the White'
 	// apply the following style to the element, make the // background 'white', add a grey border
+	gandalf.style.border = '3px solid gray'
+	gandalf.style.backgroundColor = 'white'
 }
 
 // COMMIT YOUR WORK
