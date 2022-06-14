@@ -61,7 +61,7 @@ function makeHobbits() {
 	for(let i = 0; i < hobbits.length; i++) {
 		let li = document.createElement("li")
 		li.setAttribute("id", hobbits[i])
-		li.setAttribute("class", "hobbit")
+		li.setAttribute("class", "hobbits")
 		ul.appendChild(li)
 		li.innerText = hobbits[i]
 		console.log(li)
@@ -164,10 +164,27 @@ function makeBuddies() {
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
+	for(let i = 0; i < hobbits.length; i++) {
+		document.getElementById(hobbits[i]).remove()}
 	// assemble the `hobbits` and move them to `rivendell`
-	
-}
+	const ul = document.createElement("ul")
+	for(let i = 0; i < hobbits.length; i++) {
+		let li = document.createElement("li")
+		li.setAttribute("id", hobbits[i])
+		li.setAttribute("class", "hobbits")
+		ul.appendChild(li)
+		li.innerText = hobbits[i]
+		console.log(li)
+	}
 
+	document.getElementById(lands[1]).appendChild(ul)
+	const theRing = document.createElement("div")
+	theRing.setAttribute("id", "the-ring")
+	theRing.setAttribute("class", "magic-imbued-jewelry")
+	const frodo = document.getElementById("Frodo Baggins")
+	frodo.appendChild(theRing)
+
+	}// function Shire
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
 
