@@ -208,7 +208,7 @@ function theBalrog() {
 	gandalf.style.border = '3px solid gray'
 	gandalf.style.backgroundColor = 'white'
 }
-
+theBalrog()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
 
@@ -219,9 +219,12 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+	alert('the horn of gondor has blown')
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+	boromir.parentNode.removeChild(boromir)
 }
+hornOfGondor()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
