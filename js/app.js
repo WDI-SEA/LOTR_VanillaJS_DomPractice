@@ -196,6 +196,9 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+
+document.getElementById(buddies[3]).innerHTML= 'Aragon'
+
 }
 
 // COMMIT YOUR WORK
