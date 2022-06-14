@@ -98,10 +98,19 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
-const ul = document.createElement('ul')
+	let mordorTag = document.createElement('mordor')
+	baddiesList = document.createElement('ul');
+	for (let i = 0; i < baddies.length; i++){
+		let  baddy = document.createElement('li')
+		baddy.textContent = baddies[i]
+		baddiesList.appendChild(baddies)
+	  }
 	// give each of the baddies a class of "baddy"
-
+	for (i=0; i < baddies.length; i++) {
+	mordorTag.setAttribute('class', );
+	}
 	// remember to append them to Mordor
+
 }
 
 // COMMIT YOUR WORK
@@ -118,11 +127,11 @@ function makeBuddies() {
 let asideTag = document.createElement('aside')
 
 	// put an `unordered list` of the `'buddies'` in the aside
-	buddyList = document.createElement('ul');
+	buddyList = document.createElement('ul')
 	for (let i = 0; i < buddies.length; i++){
 		let buddy = document.createElement('li')
 		buddy.textContent = buddies[i]
-		buddyList.appendChild(buddy)
+		buddyList.appendChild(buddies)
 	  }
 	// insert your aside as a child element of `rivendell`
 	aside.appendChild(buddyList)
@@ -140,6 +149,13 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	let  fellowshipMembers = rivendell.querySelectorAll('li')
+	theFellowship = document.createElement('div')
+  theFellowship.setAttribute('id', 'the-fellowship')
+  for(let i = 0; i < fellowshipMembers.length; i++){
+    theFellowship.appendChild(fellowshipMembers[i])
+	rivendell.appendChild(theFellowship)
+  }
 }
 
 // COMMIT YOUR WORK
@@ -153,6 +169,7 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	strider.textContent = 'Aragon'
 }
 
 // COMMIT YOUR WORK
