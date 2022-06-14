@@ -211,21 +211,34 @@ document.getElementById(buddies[3]).innerHTML= 'Aragon'
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
-	const theFellowship = document.createElement("div")
-	theFellowship.setAttribute("id", "the-fellowship")
-	document.getElementById(lands[1]).appendChild(theFellowship)
-	for(let i = 0; i < hobbits.length; i++) {
-		document.getElementById(hobbits[i]).appendChild(theFellowship)
-		alert(`${hobbits[i]} have join your party.`)}
-	for(let i = 0; i < buddies.length; i++) {
-		document.getElementById(buddies[i]).appendChild(theFellowship)
-		alert(`${buddies[i]} have join your party.`)	
+	const theFellowship = document.createElement('div')
+    theFellowship.setAttribute('id', 'theFellowship')
+    document.querySelector('#Rivendell').appendChild(theFellowship)
+    const friends = document.createElement('ul')
+    friends.setAttribute('id', 'friends')
+    theFellowship.appendChild(friends)
+    for(let i = 0; i < hobbits.length; i++) {
+        const friends = document.createElement('li')
+        friends.classList.add('squad')
+        friends.setAttribute('id', hobbits[i])
+        friends.appendChild(friends)
+        document.getElementById(hobbits[i]).appendChild(friends)
+        // alert (`${hobbits[i]} have joined your party`)
+    }
+    for(let i = 0; i < buddies.length; i++) {
+        const friends = document.createElement('li')
+        friends.classList.add('squad')
+        friends.setAttribute('id', buddies[i])
+        friends.appendChild(friends)
+        document.getElementById(buddies[i]).appendChild(friends)
+        // alert (`${buddies[i]} have joined party party`)
+    }
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 
 	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
-}}
+}
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
