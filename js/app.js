@@ -180,7 +180,7 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-document.getElementById('strider').innerHTML= 'Aragon'
+document.getElementById(buddies[3]).innerHTML= 'Aragon'
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
@@ -198,6 +198,30 @@ function forgeTheFellowShip() {
 	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+	const theFellowship = document.createElement('div')
+    theFellowship.setAttribute('id', 'theFellowship')
+    document.querySelector('#Rivendell').appendChild(theFellowship)
+
+    const theCrew = document.createElement('ul')
+    friends.setAttribute('id', 'friends')
+    theFellowship.appendChild(friends)
+	
+    for(let i = 0; i < hobbits.length; i++) {
+        const friends = document.createElement('li')
+        friends.classList.add('squad')
+        friends.setAttribute('id', hobbits[i])
+        friends.appendChild(friends)
+        document.getElementById(hobbits[i]).appendChild(friends)
+        // alert (`${hobbits[i]} have joined your party`)
+    }
+    for(let i = 0; i < buddies.length; i++) {
+        const friends = document.createElement('li')
+        friends.classList.add('squad')
+        friends.setAttribute('id', buddies[i])
+        friends.appendChild(friends)
+        document.getElementById(buddies[i]).appendChild(friends)
+        // alert (`${buddies[i]} have joined party party`)
+    }
 }
 
 // COMMIT YOUR WORK
@@ -211,7 +235,17 @@ function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
+		// we need to "grab" gandolf
+		const gandolfBoarder = document.getElementById(buddies[0])
+		gandolfBoarder.setAttribute('style', 'background-color: white; border: 5px solid grey')
+		gandolfBoarder.innerHTML = 'Gandalf the White'
+
+
+
 }
+
+
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
