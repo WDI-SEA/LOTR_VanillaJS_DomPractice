@@ -161,11 +161,14 @@ function makeBuddies() {
 // Chapter 6
 // ============
 
+
+
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	for(let i = 0; i < hobbits.length; i++) {
 		document.getElementById(hobbits[i]).remove()
+		//document.getElementById(lands[2]).appendChild(hobbits[i])
 	// assemble the `hobbits` and move them to `rivendell`
 	
 }
@@ -259,7 +262,12 @@ function hornOfGondor() {
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+	document.getElementById(buddies[4]).remove()
+	//alert(`the horn of gondor has blown`)
+	//alert(`boromir's beenkilled by the Uruk-hai!`)
+
 }
+	
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
@@ -268,10 +276,23 @@ function hornOfGondor() {
 // Chapter 11
 // ============
 
-function itsDangerousToGoAlone() {
-	console.log('11: itsDangerousToGoAlone')
+// function itsDangerousToGoAlone() {
+// 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
+
+// Chapter 11
+// ============
+function itsDangerousToGoAlone() {
+    console.log('11: itsDangerousToGoAlone')
+	let frodo = document.querySelectorAll('li.hobbits')[0]
+	let sam = document.querySelectorAll('li.hobbits')[1]
+	let mordor = document.getElementById('Mordor')
+	mordor.append(frodo)
+	newDiv = document.createElement('div')
+	newDiv.setAttribute('id', 'mountDoom')
+	mordor.appendChild(mountDoom)
+	mordor.appendChild(newDiv)
 }
 
 // COMMIT YOUR WORK
@@ -286,6 +307,10 @@ function weWantsIt() {
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	// Move Gollum into Mount Doom
+
+	
+
+
 }
 
 // COMMIT YOUR WORK
@@ -299,6 +324,8 @@ function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
 	// Move all the `hobbits` back to `the shire`
+
+	
 }
 
 // COMMIT YOUR WORK
