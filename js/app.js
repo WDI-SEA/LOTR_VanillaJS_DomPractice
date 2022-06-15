@@ -212,26 +212,34 @@ function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
 	const theFellowship = document.createElement('div')
-    theFellowship.setAttribute('id', 'theFellowship')
+    theFellowship.id = 'The Fellowship'
     document.querySelector('#Rivendell').appendChild(theFellowship)
-    const friends = document.createElement('ul')
-    friends.setAttribute('id', 'friends')
-    theFellowship.appendChild(friends)
-    for(let i = 0; i < hobbits.length; i++) {
-        const friends = document.createElement('li')
-        friends.classList.add('squad')
-        friends.setAttribute('id', hobbits[i])
-        friends.appendChild(friends)
-        document.getElementById(hobbits[i]).appendChild(friends)
-        // alert (`${hobbits[i]} have joined your party`)
+    
+	const friends = document.createElement('ul')
+	const lisHobbits = document.querySelectorAll('.hobbit')
+	const lisBuddies = document.querySelectorAll('.buddies')
+
+	const theFellowshipOfTheRing = document.getElementById('The Fellowship')
+	theFellowship.appendChild(friends)
+
+    
+	for(let i = 0; i < lisHobbits.length; i++) {
+		theFellowshipOfTheRing.appendChild(lisHobbits[i])
+		// document.getElementById(hobbits[i]).remove()
+        // const friends = document.createElement('li')
+        // friends.classList.add('squad')
+        // friends.setAttribute('id', hobbits[i])
+		// friends.appendChild(hobbits[i])
+        alert (`${hobbits[i]} have joined your party`)
     }
-    for(let i = 0; i < buddies.length; i++) {
-        const friends = document.createElement('li')
-        friends.classList.add('squad')
-        friends.setAttribute('id', buddies[i])
-        friends.appendChild(friends)
-        document.getElementById(buddies[i]).appendChild(friends)
-        // alert (`${buddies[i]} have joined party party`)
+    for(let i = 0; i < lisBuddies.length; i++) {
+		// document.getElementById(buddies[i]).remove()
+        // const friends = document.createElement('li')
+        // friends.classList.add('squad')
+        // friends.setAttribute('id', buddies[i])
+        // // friends.appendChild(buddies[i])
+		theFellowshipOfTheRing.appendChild(lisBuddies[i])
+        alert (`${buddies[i]} have joined party party`)
     }
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 
@@ -266,8 +274,11 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+	window.alert("The Horn of Gondor has been blown!")
 	// Boromir's been killed by the Uruk-hai!
+	window.alert("Boromir has been killed!")
 	// Remove `Boromir` from the Fellowship
+	document.getElementById(buddies[4]).remove()
 }
 
 // COMMIT YOUR WORK
@@ -280,7 +291,17 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	const frodo = document.querySelectorAll(lisHobbit[0])
+	const samwise = document.querySelectorAll(lisHobbit[1])
+	const mordor = document.getElementById(lands[2])
+	
+	mordor.appendChild(frodo)
+	mordor.appendChild(samwise)
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mountDoom = document.createElement('div')
+	mountDoom.id = 'mount-doom'
+	morder.appendChild(mountDoom)
+
 }
 
 // COMMIT YOUR WORK
