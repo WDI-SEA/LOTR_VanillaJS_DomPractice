@@ -287,96 +287,89 @@ function hornOfGondor() {
 // ============
 // Chapter 11
 // ============
-
 function itsDangerousToGoAlone() {
-	console.log('11: itsDangerousToGoAlone')
-	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
-	const frodo = document.querySelectorAll(lisHobbit[0])
-	const samwise = document.querySelectorAll(lisHobbit[1])
-	const mordor = document.getElementById(lands[2])
-	
-	mordor.appendChild(frodo)
-	mordor.appendChild(samwise)
-	// add a div with an id of `'mount-doom'` to `Mordor`
-	const mountDoom = document.createElement('div')
-	mountDoom.id = 'mount-doom'
-	morder.appendChild(mountDoom)
-
+    console.log('11: itsDangerousToGoAlone')
+    // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+    //lands[2].appendChild(hobbits[0 ,1])
+    for(let i = 0; i < 2 ; i++) {
+        document.getElementById(hobbits[i]).remove()
+        const ul = document.createElement("ul")
+        let li = document.createElement("li")
+        li.setAttribute("id", hobbits[i])
+        li.setAttribute("class", "hobbits")
+        ul.appendChild(li)
+        li.innerText = hobbits[i]
+        document.getElementById(lands[2]).appendChild(ul)
+        console.log(li)
+    }
+    const theRing = document.createElement('div')
+        theRing.setAttribute('id', 'the-ring')
+        theRing.setAttribute("class", 'magic-imbued-jewelry')
+        const frodo = document.getElementById("Frodo Baggins")
+        frodo.appendChild(theRing)
+        const mountDoom = document.createElement('div')
+    mountDoom.setAttribute('id', 'mount-doom')
+    document.getElementById(lands[2]).appendChild(mountDoom)
 }
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
-
 // ============
 // Chapter 12
 // ============
-
 function weWantsIt() {
-	console.log('12: weWantsIt')
-	// Create a div with an id of `'gollum'` and add it to Mordor
-	// Remove `the ring` from `Frodo` and give it to `Gollum`
-	// Move Gollum into Mount Doom
+    console.log('12: weWantsIt')
+    // Create a div with an id of `'gollum'` and add it to Mordor
+    // Remove `the ring` from `Frodo` and give it to `Gollum`
+    // Move Gollum into Mount Doom
+    const MORDOR = document.getElementById("Mordor")
+    const gollum = document.createElement('div')
+    gollum.setAttribute('id', 'gollum')
+    MORDOR.appendChild(gollum)
 }
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring".
-
 // ============
 // Chapter 13
 // ============
-
 function thereAndBackAgain() {
-	console.log('13: thereAndBackAgain')
-	// remove `Gollum` and `the Ring` from the document
-	// Move all the `hobbits` back to `the shire`
+    console.log('13: thereAndBackAgain')
+    // // remove `Gollum` and `the Ring` from the document
+    for(let i = 0; i < 2 ; i++) {
+        document.getElementById(hobbits[i]).remove()
+        const ul = document.createElement("ul")
+        let li = document.createElement("li")
+        li.setAttribute("id", hobbits[i])
+        li.setAttribute("class", "hobbits")
+        ul.appendChild(li)
+        li.innerText = hobbits[i]
+        document.getElementById(lands[0]).appendChild(ul)
+        console.log(li)
+    }
+    for(let i = 0; i <2 ; i++) {
+        document.getElementById(hobbits[i]).remove()
+        const ul = document.createElement("ul")
+        document.getElementById(lands[1]).appendChild(ul)
+        let li = document.createElement("li")
+        li.setAttribute("id", hobbits[i])
+        li.setAttribute("class", "hobbits")
+        ul.appendChild(li)
+        li.innerText = hobbits[i]
+        console.log(li)
+        document.getElementById(lands[1]).appendChild(ul)
+    }
+    for(let i = 0; i < hobbits.length ; i++) {
+        document.getElementById(hobbits[i]).remove()
+        const ul = document.createElement("ul")
+        document.getElementById(lands[1]).appendChild(ul)
+        let li = document.createElement("li")
+        li.setAttribute("id", hobbits[i])
+        li.setAttribute("class", "hobbits")
+        ul.appendChild(li)
+        li.innerText = hobbits[i]
+        console.log(li)
+        document.getElementById(lands[0]).appendChild(ul)
+    }
+    document.getElementById('gollum').remove()
+    const hobbitList = document.getElementById(hobbits[i])
+    document.getElementById(lands[0]).append(hobbitList)
 }
-
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
-
-// =====================================
-// Don't change anything below this line
-// =====================================
-
-// =====================================
-// This code is loading all of the event listeners for the buttons in your application.
-// =====================================
-
-document.getElementById('chapter-1').addEventListener('click', makeMiddleEarth)
-document.getElementById('chapter-2').addEventListener('click', makeHobbits)
-document
-	.getElementById('chapter-3')
-	.addEventListener('click', keepItSecretKeepItSafe)
-document.getElementById('chapter-4').addEventListener('click', makeBaddies)
-document.getElementById('chapter-5').addEventListener('click', makeBuddies)
-document.getElementById('chapter-6').addEventListener('click', leaveTheShire)
-document
-	.getElementById('chapter-7')
-	.addEventListener('click', beautifulStranger)
-document
-	.getElementById('chapter-8')
-	.addEventListener('click', forgeTheFellowShip)
-document.getElementById('chapter-9').addEventListener('click', theBalrog)
-document.getElementById('chapter-10').addEventListener('click', hornOfGondor)
-document
-	.getElementById('chapter-11')
-	.addEventListener('click', itsDangerousToGoAlone)
-document.getElementById('chapter-12').addEventListener('click', weWantsIt)
-document
-	.getElementById('chapter-13')
-	.addEventListener('click', thereAndBackAgain)
-document.getElementById('all-chapters').addEventListener('click', () => {
-	makeMiddleEarth()
-	makeHobbits()
-	keepItSecretKeepItSafe()
-	makeBaddies()
-	makeBuddies()
-	leaveTheShire()
-	beautifulStranger()
-	forgeTheFellowShip()
-	theBalrog()
-	hornOfGondor()
-	itsDangerousToGoAlone()
-	weWantsIt()
-	thereAndBackAgain()
-})
