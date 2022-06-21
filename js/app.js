@@ -157,6 +157,7 @@ function leaveTheShire() {
 	rivendell.appendChild(theFellowship)
   }
 }
+leaveTheShire()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
