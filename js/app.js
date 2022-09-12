@@ -35,40 +35,34 @@ function makeMiddleEarth() {
 	}
 	document.body.appendChild(middleEarth)
 }
+
 makeMiddleEarth()
-	// 1. create a section tag with an id of middle-earth
-
-	// 2. use a for loop to iterate over the lands array that does the following:
-
-	//   2a. creates an article tag (there should be one for each land when the loop is done)
-
-	//   2b. gives each land article an `id` tag of the corresponding land name
-
-	//   2c. includes an h1 with the name of the land inside each land article
-
-	//   2d. appends each land to the middle-earth section
-
-	// 3. append the section to the body of the DOM.
-
-
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 1 complete - Made Middle Earth".
-
 // ============
 // Chapter 2
 // ============
 
 function makeHobbits() {
 	console.log('2: makeHobbits')
+	const hobbitList= document.createElement('ul')
+	for (let i = 0; i < hobbits.length ; i++){
+		const hobbitNames= document.createElement('li')
+		hobbitNames.setAttribute('class', 'hobbit')
+		hobbitNames.innerText= hobbits[i]
+		hobbitList.appendChild(hobbitNames)
+		}
+	const shire= document.getElementById('The-Shire')
+	shire.appendChild(hobbitList)
+}
 
-	// display an `unordered list` of hobbits in the shire
+makeHobbits()
+		// display an `unordered list` of hobbits in the shire
 
 	// give each hobbit a class of `hobbit`
 
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
-}
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
@@ -279,3 +273,24 @@ document.getElementById('all-chapters').addEventListener('click', () => {
 	weWantsIt()
 	thereAndBackAgain()
 })
+
+
+
+
+	// 1. create a section tag with an id of middle-earth
+
+	// 2. use a for loop to iterate over the lands array that does the following:
+
+	//   2a. creates an article tag (there should be one for each land when the loop is done)
+
+	//   2b. gives each land article an `id` tag of the corresponding land name
+
+	//   2c. includes an h1 with the name of the land inside each land article
+
+	//   2d. appends each land to the middle-earth section
+
+	// 3. append the section to the body of the DOM.
+
+
+// COMMIT YOUR WORK
+// The commit message should read: "Chapter 1 complete - Made Middle Earth".
