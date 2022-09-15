@@ -160,6 +160,15 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+const buddyList = document.querySelector('#Rivendell').querySelector('aside').querySelector('ul')
+const buddyNodes = buddyList.querySelector('li')
+for (let node of buddyNodes) {
+	if(node.innerText === 'strider') {
+		node.innerText = 'Aragorn'
+	}
+}
+
+
 }
 
 // COMMIT YOUR WORK
