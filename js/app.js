@@ -217,6 +217,13 @@ function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
+	let fellowshipItems = document.querySelector('#the-fellowship').querySelectorAll('li')
+	for (let fellow of fellowshipItems) {
+		if (fellow.textContent === 'Gandalf the Grey') {
+			fellow.textContent = 'Gandalf the White'
+			fellow.style.background = 'white'
+			fellow.style.border = 'thick solid grey'
+
 }
 
 // COMMIT YOUR WORK
