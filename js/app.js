@@ -36,7 +36,7 @@ function makeMiddleEarth() {
 	document.body.appendChild(middleEarth)
 }
 
-makeMiddleEarth()
+
 // ============
 // Chapter 2
 // ============
@@ -54,32 +54,30 @@ function makeHobbits() {
 	shire.appendChild(hobbitList)
 }
 
-makeHobbits()
-		// display an `unordered list` of hobbits in the shire
-
-	// give each hobbit a class of `hobbit`
-
-	// hint: create a 'ul' outside the loop into which to append the 'li's
-
-	// hint: get 'The-Shire' by using its id
-
-
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 2 complete - Made the Hobbits".
-
 // ============
 // Chapter 3
 // ============
 
 function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
+	const theRing = document.createElement('div')
+	theRing.setAttribute('id', 'the-ring')
+	theRing.setAttribute('class', 'magic-imbued-jewelry')
+		
+	const frodo = document.querySelector('ul')
+	const hobbitLi = frodo.children[0]
+	hobbitLi.appendChild(theRing)
+} 
+
+
+//   keepItSecretKeepItSafe()
 
 	// create a div with an id of `'the-ring'`
 
 	// give the div a class of `'magic-imbued-jewelry'`
 
 	// add the ring as a child of `Frodo`
-}
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
@@ -90,13 +88,24 @@ function keepItSecretKeepItSafe() {
 
 function makeBaddies() {
 	console.log('4: makeBaddies')
+	const badList= document.createElement('ul')
+	for (let i = 0; i < baddies.length ; i++){
+		const badNames = document.createElement('li')
+		badNames.setAttribute('class', 'baddy')
+		badNames.innerText= baddies[i]
+		badList.appendChild(badNames)
+
+		}
+		const mordor= document.getElementById('Mordor')
+		mordor.appendChild(badList)
+	}
 
 	// display an unordered list of baddies in Mordor
 
 	// give each of the baddies a class of "baddy"
 
 	// remember to append them to Mordor
-}
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
@@ -106,7 +115,18 @@ function makeBaddies() {
 // ============
 
 function makeBuddies() {
+	const aside = document.createElement('aside')
+	const buds = document.createElement('ul')
 	console.log('5: makeBuddies')
+	for(let i = 0; i < buddies.length ; i ++){
+		const budNames = document.createElement('li')
+		budNames.setAttribute('class', 'buddd')
+		budNames.innerText= buddies[i]
+		buds.appendChild(budNames)
+	}
+	const riv= document.getElementById('Rivendell')
+	aside.appendChild(buds)
+	riv.appendChild(aside)
 
 	// create an `aside` tag
 
@@ -124,7 +144,15 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
+	const riv= document.getElementById('Rivendell')
+	const shi= document.getElementById('The-Shire')
 
+	const hobbitP = shi.children[1]
+	riv.appendChild(hobbitP)
+
+
+
+	
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
@@ -137,8 +165,20 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
+	// forEach(buddies, [3])
+
+
+	let strider = document.querySelectorAll('li.buddd')[3]
+	strider.innerText = 'Aragorn'
+
+	// const fellowship = document.getElementsByTagName('aside')
+	// const fellUl = fellowship.children[0]
+	// const arr = fellUl.children[3]
+	// arr.innerText(`'Aragon'`)
+
 
 	// change the `'Strider'` text to `'Aragorn'`
+	// splice????
 }
 
 // COMMIT YOUR WORK
@@ -153,6 +193,21 @@ function forgeTheFellowShip() {
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
+
+	const theFellowship = document.createElement('div')
+	const riv = document.getElementById('Rivendell')
+	riv.appendChild(theFellowship)
+	const hobBud = document.getElementsByClass('hobbit') 
+	const buddbudd = document.getElementsByClass('buddd')
+	
+	for( i = 0; i < hubBud.length; i ++ ){
+		the-fellowship.appendChild(hobBud)
+	}
+	for( i = 0; i < hubBud.length; i ++ ){
+		the-fellowship.appendChild(buddbudd)
+	}
+	
+
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
@@ -222,6 +277,20 @@ function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
 	// Move all the `hobbits` back to `the shire`
+
+	function makeHobbits() {
+		console.log('2: makeHobbits')
+		const hobbitList= document.createElement('ul')
+		for (let i = 0; i < hobbits.length ; i++){
+			const hobbitNames= document.createElement('li')
+			hobbitNames.setAttribute('class', 'hobbit')
+			hobbitNames.innerText= hobbits[i]
+			hobbitList.appendChild(hobbitNames)
+			}
+		const shire= document.getElementById('The-Shire')
+		shire.appendChild(hobbitList)
+	}
+
 }
 
 // COMMIT YOUR WORK
