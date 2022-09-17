@@ -61,7 +61,7 @@ function makeHobbits() {
 		const hobbitName = hobbits[i]
 		listI.append(hobbitName)
 		listI.classList.add('hobbit')
-		hobbitList.appendChild(listI)
+		hobbits.appendChild(listI)
 	}
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
@@ -79,10 +79,12 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-
+	const divRing = document.createElement('div')
+	divRing.setAttribute('id', 'the-ring')
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	divRing.setAttribute('class', 'magic-imbued-jewelry')
 	// add the ring as a child of `Frodo`
+	
 }
 
 // COMMIT YOUR WORK
