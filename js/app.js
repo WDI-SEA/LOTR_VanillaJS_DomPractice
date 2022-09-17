@@ -132,6 +132,9 @@ for (i = 0; i < buddies.length; i++) {
 
 }
 	// insert your aside as a child element of `rivendell`
+	const theRivendell = document.getElementById('#Rivendell')
+	theRivendell.appendChild(aside)
+
 }
 
 // COMMIT YOUR WORK
@@ -145,6 +148,10 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	const theShire = document.getElementById('The-Shire')
+	const theRivendell = document.getElementById('Rivendell')
+	theRivendell.appendChild(hobbits)
+
 }
 
 // COMMIT YOUR WORK
