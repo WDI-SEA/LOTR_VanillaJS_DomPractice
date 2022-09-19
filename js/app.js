@@ -200,6 +200,10 @@ function forgeTheFellowShip() {
 
 function theBalrog() {
 	console.log('9: theBalrog')
+	const gan =document.getElementById('Gandalf')
+	gan.innerText = ('Gandalf the White')
+	gan.style.background = 'white'
+	gan.style.borderColor = 'grey'
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
