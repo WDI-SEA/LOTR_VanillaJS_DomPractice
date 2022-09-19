@@ -177,6 +177,13 @@ name.innerText = 'Aragorn'
 
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
+	const newDiv = document.createElement('div')
+	newDiv.id = 'the-fellowship'
+		const rivendell = document.getElementById('Rivendell')
+		rivendell.appendChild(newDiv)
+		const hobbit = document.getElementById('hobbits')
+		const buddy = document.getElementById('buddies')
+		newDiv.appendChild(hobbit, buddy)
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
