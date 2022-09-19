@@ -219,7 +219,7 @@ function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	alert('the horn of gondor has been blown. BOromors been killed by the Urik-hai!')
 	const boro = document.getElementById('Boromir')
-	Boromor.remove()
+	boro.remove()
 		
 		
 		
@@ -237,6 +237,18 @@ function hornOfGondor() {
 
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
+	const frodoSam = document.getElementById('Frodo')
+	cosnt samFrodo = document.getElementById('Sam')
+	const mordor = document.getElementById('Mordor')
+	mordor.appendChild('Frodo')
+	mordor.appendChild('Sam')
+	 const div = document.createElement('div')
+	 div.id = "mount-doom"
+	 mordor.appendChild(div)
+
+
+
+
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
 }
