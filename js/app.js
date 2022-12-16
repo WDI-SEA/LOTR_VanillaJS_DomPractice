@@ -84,12 +84,21 @@ function makeHobbits() {
 
 function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
-
 	// create a div with an id of `'the-ring'`
-
+	const oneRingDiv = document.createElement('div')
+	oneRingDiv.id = 'the-ring'
 	// give the div a class of `'magic-imbued-jewelry'`
+	oneRingDiv.className = 'magic-imbued-jewelry'
+	
 
 	// add the ring as a child of `Frodo`
+	// we want to target frodo specificaally
+	// start with the ul by its id
+	// then figure out how ot target the individual li's from there
+	const ulHobbits = document.querySelector('#hobbits')
+	const hobbitsArray = ulHobbits.children
+	const frodoLi = hobbitsArray[0]
+	frodoLi.appendChild(oneRingDiv)
 }
 
 // COMMIT YOUR WORK
