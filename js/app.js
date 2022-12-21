@@ -161,10 +161,11 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
+	const rivendell = document.getElementById('Rivendell')
+	const ulHobbits = document.querySelector('#hobbits')
+	rivendell.append(ulHobbits)
 	// assemble the `hobbits` and move them to `rivendell`
 }
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
 
@@ -174,7 +175,7 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+	
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
