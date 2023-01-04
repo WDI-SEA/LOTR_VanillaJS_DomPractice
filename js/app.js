@@ -173,8 +173,13 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
+// assemble the `hobbits` and move them to `rivendell`
+const ulHobbits = document.getElementById('hobbits')
+const rivendell = document.getElementById('Rivendell')
+const theShire = document.getElementById('The-Shire')
 
-	// assemble the `hobbits` and move them to `rivendell`
+theShire.removeChild(ulHobbits)
+rivendell.appendChild(ulHobbits)
 }
 
 // COMMIT YOUR WORK
