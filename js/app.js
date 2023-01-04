@@ -191,8 +191,12 @@ rivendell.appendChild(ulHobbits)
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
+// change the `'Strider'` text to `'Aragorn'`
 
-	// change the `'Strider'` text to `'Aragorn'`
+const ulBuddies = document.querySelector('#buddies')
+const buddiesArray = ulBuddies.children
+const aragorn = buddiesArray[3]
+aragorn.innerHTML = 'Aragorn'
 }
 
 // COMMIT YOUR WORK
