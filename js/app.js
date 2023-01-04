@@ -120,12 +120,20 @@ oneRingDiv.className = 'magic-imbued-jewelry'
 
 function makeBaddies() {
 	console.log('4: makeBaddies')
-
 	// display an unordered list of baddies in Mordor
-
 	// give each of the baddies a class of "baddy"
-
 	// remember to append them to Mordor
+	const mordor = document.getElementById('Mordor')
+	const ulBaddies = document.createElement('ul')
+	ulBaddies.id = 'baddies'
+
+	for (let i = 0; i < baddies.length; i++) {
+		const liBaddy = document.createElement('li')
+		liBaddy.className = 'baddy'
+		liBaddy.textContent = baddies[i]
+		ulBaddies.appendChild(liBaddy)
+	}
+	mordor.appendChild(ulBaddies)
 }
 
 // COMMIT YOUR WORK
