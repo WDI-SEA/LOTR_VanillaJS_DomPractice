@@ -217,6 +217,7 @@ theFellowShipDiv.id = 'the-fellowship'
 rivendell.appendChild(theFellowShipDiv)
 
 const ulFellowship = document.createElement('ul')
+ulFellowship.id =  'ulFellowship'
 theFellowShipDiv.appendChild(ulFellowship)
 
 
@@ -225,7 +226,7 @@ const hobbitsArray = ulHobbits.children
 
 
 for (let i = 0; i < hobbits.length; i++) {
-	alert(hobbitsArray[0].innerText + ' has now joined the fellowship!')
+	//alert(hobbitsArray[0].innerText + ' has now joined the fellowship!')
 	ulFellowship.appendChild(hobbitsArray[0])
 }
 
@@ -233,7 +234,7 @@ const ulBuddies = document.getElementById('buddies')
 const buddiesArray = ulBuddies.children
 
 for (let i = 0; i < buddies.length; i ++) {
-	alert(buddiesArray[0].innerText + ' has now joined the fellowship!')
+	//alert(buddiesArray[0].innerText + ' has now joined the fellowship!')
 	ulFellowship.appendChild(buddiesArray[0])
 }
 
@@ -252,6 +253,15 @@ function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
+	const ulFellowship = document.getElementById('ulFellowship')
+	const ulFellowshipArray = ulFellowship.children
+	const gandalf = ulFellowshipArray[4]
+	gandalf.innerText = 'Gandalf the White'
+	gandalf.id = 'gandalf'
+
+	const gandalfBackground = document.getElementById('gandalf')
+	gandalfBackground.style.backgroundColor = 'white'
+	gandalfBackground.style.border = 'solid grey'
 }
 
 // COMMIT YOUR WORK
