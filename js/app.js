@@ -280,7 +280,7 @@ function hornOfGondor() {
 	const ulFellowship = document.getElementById('ulFellowship')
 	const ulFellowshipArray = ulFellowship.children
 	ulFellowshipArray[8].remove()
-	console.log(ulFellowship.children)
+	//console.log(ulFellowship.children)
 }
 
 // COMMIT YOUR WORK
@@ -294,6 +294,22 @@ function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mordor = document.getElementById('Mordor')
+	const mountDoomDiv = document.createElement('div')
+	mountDoomDiv.id = ('mount-doom')
+	mordor.appendChild(mountDoomDiv)
+
+	const ulHobbitsMountDoom = document.createElement('ul')
+	ulHobbitsMountDoom.id = 'ulHobbitsMountDoom'
+	mountDoomDiv.appendChild(ulHobbitsMountDoom)
+
+	const ulFellowship = document.getElementById('ulFellowship')
+	const ulFellowshipArray = ulFellowship.children
+
+	ulHobbitsMountDoom.appendChild(ulFellowshipArray[0])
+	ulHobbitsMountDoom.appendChild(ulFellowshipArray[0])
+
+console.log(ulHobbitsMountDoom)
 }
 
 // COMMIT YOUR WORK
